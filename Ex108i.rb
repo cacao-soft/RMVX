@@ -20,6 +20,22 @@
   ※ 他のＣＡＣＡＯ製スクリプトより上、もしくはＣＢＳ直下に配置して下さい。
   ※ 注釈処理を行っているスクリプトと高確率で競合します。
 
+ -- 定義方法 ----------------------------------------------------------------
+
+  このスクリプトは、注釈の内容を一行ずつ参照します。
+  Game_Interpreter#command_108 を別名定義してご使用ください。
+
+  例としては、下記のように定義します。
+
+  class Game_Interpreter
+    def command_108
+      for params in @parameters
+        p params
+      end
+      return true
+    end
+  end
+  
 =end
 
 
