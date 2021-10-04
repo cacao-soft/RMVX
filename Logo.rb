@@ -1,5 +1,5 @@
 #=============================================================================
-#  [RGSS2] オープニングロゴ - v1.0.1
+#  [RGSS2] オープニングロゴ - v2.0.0
 # ---------------------------------------------------------------------------
 #  Copyright (c) 2021 CACAO
 #  Released under the MIT License.
@@ -14,6 +14,10 @@
  -- 概    要 ----------------------------------------------------------------
 
   ゲーム開始時にロゴを表示します。
+
+ -- 注意事項 ----------------------------------------------------------------
+
+  ※ デフォルトの設定では、テストプレイ時にロゴが表示されません。
 
  -- 使用方法 ----------------------------------------------------------------
 
@@ -32,32 +36,33 @@
 #==============================================================================
 # ◆ 設定項目
 #==============================================================================
-class Logo
+module OpeningLogo
   #--------------------------------------------------------------------------
-  # ◇ ロゴ表示のタイプ（0：アニメーション、1：トランジション）
+  # ◇ ロゴ表示設定
   #--------------------------------------------------------------------------
-    LOGO_TYPE = 1
+  FRAMES = [
+    # picture, frame, fadein, frame, fadeout, frame, sound, volume, pitch
+    ["tkool", 40, "fadein", 40, "fadeout", 40],
+    ["logo", 40, "", 40, nil, 0, "Saint6"],
+  ]
   #--------------------------------------------------------------------------
-  # ◇ アニメーション番号
+  # ◇ トランジション画像の保存フォルダ
+  #     0 : ピクチャフォルダ        (Graphics/Pictures)
+  #     1 : トランジションフォルダ  (Graphics/Transitions)
   #--------------------------------------------------------------------------
-    IMG_ANIMATION = 81
+  DIR_TRANSITION = 0
   #--------------------------------------------------------------------------
-  # ◇ トランジション画像（表示時、消去時）
+  # ◇ ロゴ間のウェイト
   #--------------------------------------------------------------------------
-    IMG_TRANS = ["009", "001"]
+  WAIT = 10
   #--------------------------------------------------------------------------
-  # ◇ トランジション（フレーム）
+  # ◇ テストプレイ時のロゴ表示の有無
   #--------------------------------------------------------------------------
-    TRANSITION = 60
+  TEST_LOGO = false
   #--------------------------------------------------------------------------
-  # ◇ ロゴの表示時間（フレーム）
+  # ◇ ソフトリセット時のロゴ表示の有無
   #--------------------------------------------------------------------------
-    WAIT_VIEW = 40
-  #--------------------------------------------------------------------------
-  # ◇ ロゴ表示後のウェイト（フレーム）
-  #--------------------------------------------------------------------------
-    WAIT_END = 20
-end
+  RESET_LOGO = false
 
 
 #/////////////////////////////////////////////////////////////////////////////#
@@ -67,40 +72,52 @@ end
 #/////////////////////////////////////////////////////////////////////////////#
 
 
-class Logo
-  def initialize
-    if LOGO_TYPE.zero?
-      @logo_sprite = Sprite_Base.new
-      @logo_sprite.x = Graphics.width / 2
-      @logo_sprite.y = Graphics.height / 2
-      ad = load_data("Data/Animations.rvdata")[IMG_ANIMATION]
-      @logo_sprite.start_animation(ad)
-    else
-      @logo_sprite = Sprite.new
-      bitmap = Cache.picture("Logo")
-      @logo_sprite.x = (544 - bitmap.width) / 2
-      @logo_sprite.y = (416 - bitmap.height) / 2
-      Graphics.freeze
-      @logo_sprite.bitmap = bitmap
-    end
-    main
+  #--------------------------------------------------------------------------
+  # ● ロゴ表示
+  #--------------------------------------------------------------------------
+  def self.show
+    return if $TEST && !TEST_LOGO             # テストプレイ
+    return if $BTEST                          # 戦闘テスト
+    return if $! && !RESET_LOGO               # ソフトリセット
+    FRAMES.each {|logo| show_logo(*logo) }    # 各ロゴの表示
+  rescue Errno::ENOENT
+    filename = $!.message.sub("No such file or directory - ", "")
+    print("ファイル #{filename} が見つかりません。")
   end
-  def main
-    if LOGO_TYPE.zero?
-      while @logo_sprite.animation?
-        @logo_sprite.update
-        Graphics.update
-      end
-    else
-      Graphics.transition(TRANSITION, "Graphics/Transitions/#{IMG_TRANS[0]}")
-      Graphics.wait(WAIT_VIEW)
-      Graphics.freeze
-      @logo_sprite.bitmap.dispose
-      Graphics.transition(TRANSITION, "Graphics/Transitions/#{IMG_TRANS[1]}")
-    end
-    Graphics.wait(WAIT_END)
-    @logo_sprite.dispose
+  #--------------------------------------------------------------------------
+  # ● ロゴ表示
+  #     pf  : ロゴピクチャのファイル名
+  #     pt  : ロゴピクチャの表示時間
+  #     fif : フェードイン時のトランジション画像のファイル名
+  #     fit : フェードインに掛ける時間
+  #     fof : フェードアウト時のトランジション画像のファイル名
+  #     fot : フェードアウトに掛ける時間
+  #     sf  : フェードイン時に演奏する効果音のファイル名
+  #     sv  : 効果音の音量 (80)
+  #     sp  : 効果音のピッチ (100)
+  #--------------------------------------------------------------------------
+  def self.show_logo(pf, pt, fif, fit, fof, fot, sf = "", sv = 80, sp = 100)
+    dir = "Graphics/#{(DIR_TRANSITION == 0) ? "Pictures" : "Transitions"}/"
+    fadein = (fif.empty? ? [fit] : [fit, dir + fif])
+    fadeout = (fof ? (fof.empty? ? [fot] : [fot, dir + fof]) : nil)
+    # ロゴ表示
+    Graphics.freeze
+    logo_sprite = Sprite.new
+    logo_sprite.bitmap = Bitmap.new("Graphics/Pictures/#{pf}")
+    logo_sprite.x = (Graphics.width - logo_sprite.bitmap.width) / 2
+    logo_sprite.y = (Graphics.height - logo_sprite.bitmap.height) / 2
+    # フェードイン
+    Audio.se_play("Audio/SE/#{sf}", sv, sp) unless sf.empty?
+    Graphics.transition(*fadein)
+    Graphics.wait(pt)
+    # フェードアウト
+    Graphics.freeze
+    logo_sprite.bitmap.dispose
+    logo_sprite.dispose
+    Graphics.transition(*fadeout) if fadeout
+    Audio.se_stop
+    Graphics.wait(WAIT)
   end
 end
 
-$scene = Logo.new unless $BTEST
+OpeningLogo.show
