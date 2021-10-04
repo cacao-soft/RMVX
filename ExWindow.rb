@@ -17,14 +17,14 @@
 
  -- 使用方法 ----------------------------------------------------------------
 
- ★ 背景画像
-  include CAO::Background
-  self.background = "ファイル名"
+  ★ 背景画像
+   include CAO::Background
+   self.background = "ファイル名"
 
- ★ スライド開閉
-  include CAO::Slide
-  self.slide_type = 閉じる方向
-  self.slide_speed = 速度
+  ★ スライド開閉
+   include CAO::Slide
+   self.slide_type = 閉じる方向
+   self.slide_speed = 速度
 
 =end
 
