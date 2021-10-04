@@ -4,14 +4,14 @@
 
 |スクリプト名|スクリプト|ドキュメント|
 |:--|:-:|:-:|
-|Cacao Base Script|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/cbs.rb)||
-|RPGツクールVX Fan Patch|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/cbs.rb)||
+|Cacao Base Script|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/cbs.rb)|:heavy_check_mark:|
+|RPGツクールVX Fan Patch|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/cbs.rb)|:heavy_check_mark:|
 
 ## 開発者用
 
 |スクリプト名|スクリプト|ドキュメント|
 |:--|:-:|:-:|
-|Interpreter 108 EX|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/Ex108i.rb)||
+|Interpreter 108 EX|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/Ex108i.rb)|:heavy_multiplication_x:|
 |Bitmap Class EX|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/ExBitmap.rb)||
 |初期化ファイルの操作|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/ExFile.rb)||
 |ディレクトリ操作|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/Dir.rb)||
@@ -40,6 +40,7 @@
 |＜拡張＞ デバッグ機能|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/Debug.rb)||
 |マップコマンド|||
 |デバッグコンソール|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/Console.rb)||
+|デバッグエース|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/DebugAce.rb)||
 
 ## ショップ関連
 
@@ -63,7 +64,7 @@
 |モンスター図鑑 #2|||
 |パーティ編成|||
 |ステータス振り分け機能|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/StatusPoint.rb)||
-|アイテム合成|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/MakeItem.rb)||
+|アイテム合成|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/MakeItem2.rb)||
 
 ## メッセージ関連
 
@@ -83,15 +84,15 @@
 |マップ名表示機能|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/Location.rb)||
 |自動影機能の回避|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/Shadow.rb)||
 |タイルの置換|||
-|遠景のフェード|||
-|＜拡張＞ 天候の設定|||
+|遠景のフェード|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/.rParallaxb)|:heavy_multiplication_x:|
+|＜拡張＞ 天候の設定|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/.rExWeatherb)|:heavy_multiplication_x:|
 
 ## バトル関連
 
 |スクリプト名|スクリプト|ドキュメント|
 |:--|:-:|:-:|
 |戦闘背景の変更|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/BattleBack.rb)||
-|隊列の変更|||
+|隊列の変更|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/Formation.rb)|:heavy_multiplication_x:|
 
 ## ミニゲーム
 
