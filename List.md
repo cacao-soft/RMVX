@@ -26,7 +26,7 @@
 |:--|:-:|:-:|
 |カスタムメニュー|||
 |＜拡張＞ ピクチャの操作|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/ExPicture.rb)||
-|＜拡張＞ 名前入力の処理|:heavy_check_mark:|:heavy_check_mark:|
+|＜拡張＞ 名前入力の処理|:heavy_check_mark:|:heavy_check_mark: [閲覧](docs/ExName.md)​|
 |＜拡張＞ セーブ画面|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/ExSave.rb)||
 |アイテム個別所持|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/PersonalItems.rb)||
 |＜拡張＞ ＥＶ出現条件|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/ExEvent.rb)||
