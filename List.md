@@ -25,13 +25,15 @@
 |スクリプト名|スクリプト|ドキュメント|
 |:--|:-:|:-:|
 |カスタムメニュー|||
-|＜拡張＞ ピクチャの操作|||
-|＜拡張＞ 名前入力の処理|||
-|＜拡張＞ セーブ画面|||
+|＜拡張＞ ピクチャの操作|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/ExPicture.rb)||
+|＜拡張＞ 名前入力の処理||:heavy_check_mark:|
+|＜拡張＞ セーブ画面|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/ExSave.rb)||
 |アイテム個別所持|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/PersonalItems.rb)||
 |＜拡張＞ ＥＶ出現条件|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/ExEvent.rb)||
-|解像度の変更|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/vga.rb)||
-|移動速度の変更|||
+|解像度の変更|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/Resolution.rb)||
+|移動速度の変更|:heavy_check_mark: [リンク](http://cacaosoft.blog42.fc2.com/blog-entry-472.html)||
+|ピクチャの反転|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/PicMirror.rb)|:heavy_multiplication_x:|
+|ピクチャの画像保存|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/SavePicture.rb)||
 
 ## デバッグ関連
 
@@ -83,9 +85,9 @@
 |:--|:-:|:-:|
 |マップ名表示機能|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/Location.rb)||
 |自動影機能の回避|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/Shadow.rb)||
-|タイルの置換|||
-|遠景のフェード|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/.rParallaxb)|:heavy_multiplication_x:|
-|＜拡張＞ 天候の設定|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/.rExWeatherb)|:heavy_multiplication_x:|
+|タイルの置換|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/ChangeTile.rb)||
+|遠景のフェード|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/Parallax.rb)|:heavy_multiplication_x:|
+|＜拡張＞ 天候の設定|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/ExWeather.rb)|:heavy_multiplication_x:|
 
 ## バトル関連
 
@@ -114,19 +116,16 @@
 
 |スクリプト名|スクリプト|ドキュメント|
 |:--|:-:|:-:|
-|その他|||
-|コマンドにアイコン表示|||
+|コマンドにアイコン表示|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/CommandIcon.rb)||
 |装備の固定|||
 |アイテムの所持制限|||
 |売却画面でカーソルリセット|||
 |アイテム使用予約|||
 |ショップで装備変更|||
-|セーブ・ロードの確認と完了メッセージ|||
-|リトライ機能|||
+|セーブ・ロードの確認と完了メッセージ|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/SaveMessage.rb)||
+|リトライ機能|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/Retry.rb)||
 |マップの画像保存|||
 |行動範囲の設定|||
 |ラベルのサブルーチン化|||
 |エセフルスクリーン|||
 |プレイヤーのキー操作無効|||
-|ディレクトリの操作|||
-|ＶＧＡプロジェクト|||
