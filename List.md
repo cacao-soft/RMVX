@@ -26,12 +26,12 @@
 |:--|:-:|:-:|
 |カスタムメニュー|||
 |＜拡張＞ ピクチャの操作|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/ExPicture.rb)||
-|＜拡張＞ 名前入力の処理||:heavy_check_mark:|
+|＜拡張＞ 名前入力の処理|:heavy_check_mark:|:heavy_check_mark:|
 |＜拡張＞ セーブ画面|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/ExSave.rb)||
 |アイテム個別所持|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/PersonalItems.rb)||
 |＜拡張＞ ＥＶ出現条件|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/ExEvent.rb)||
 |解像度の変更|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/Resolution.rb)||
-|移動速度の変更|:heavy_check_mark: [リンク](http://cacaosoft.blog42.fc2.com/blog-entry-472.html)||
+|移動速度の変更|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/WalkSpeed.rb)||
 |ピクチャの反転|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/PicMirror.rb)|:heavy_multiplication_x:|
 |ピクチャの画像保存|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/SavePicture.rb)||
 
@@ -62,9 +62,9 @@
 
 |スクリプト名|スクリプト|ドキュメント|
 |:--|:-:|:-:|
-|モンスター図鑑|||
-|モンスター図鑑 #2|||
-|パーティ編成|||
+|モンスター図鑑|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/EnemyBook.rb)||
+|モンスター図鑑 #2|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/MonsterBook.rb)||
+|パーティ編成|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/Member.rb)||
 |ステータス振り分け機能|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/StatusPoint.rb)||
 |アイテム合成|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/MakeItem2.rb)||
 
@@ -72,9 +72,9 @@
 
 |スクリプト名|スクリプト|ドキュメント|
 |:--|:-:|:-:|
-|＜拡張＞ 文章の表示|||
-|文字装飾|||
-|メッセージ黒背景の変更|||
+|＜拡張＞ 文章の表示|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/ExMessage.rb)||
+|文字装飾|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/ExDrawText.rb)||
+|メッセージ黒背景の変更|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/ExMessageBack.rb)||
 |メッセージスキップ|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/MessageSkip.rb)||
 |メッセージログ|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/MessageLog.rb)||
 |メッセージロール|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/MessageRoll.rb)||
