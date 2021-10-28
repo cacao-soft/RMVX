@@ -51,7 +51,7 @@
 |＜拡張＞ ショップステータス|||
 |＜拡張＞ ショップステータス #2|||
 |カスタムショップステータス|||
-|装備可能クラス表示|||
+|装備可能クラス表示|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/ShopEquipClass.rb)||
 |ショップコメント|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/ShopComment.rb)|:heavy_multiplication_x:|
 |ショップ店員|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/Staff2.rb)||
 |ショップアイテム分類|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/ShopCategorize.rb)||
