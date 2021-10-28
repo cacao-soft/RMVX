@@ -30,6 +30,7 @@
   ★ $game_system.picture_count
    セーブ回数を取得します。数値を代入することで回数の変更も可能です。
 
+
 =end
 
 
