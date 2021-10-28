@@ -14,19 +14,19 @@
 
 ## スクリプト
 
-- 本体 [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/ExName2.rb)
-- 設定 [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/ExName2_config.rb)
-- 拡張 [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/ExName2_multi.rb) マルチインプット
+- 本体 [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/ExName.rb)
+- 設定 [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/ExName/ExName_config.rb)
+- 拡張 [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/ExName/ExName_multi.rb) マルチインプット
 
 ## 文字種定義
 
 |種類|スクリプト|説明|
 |:-|:-:|:-|
-|常用漢字Ａ|[ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/niKanji1.rb)|漢字のみ|
-|常用漢字Ａ|[ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/niKanji1.rb)|ひらがな付き|
-|全角英数|[ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/niEisu.rb)||
-|半角英数|[ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/niHalfEisu.rb)||
-|半角カタカナ|[ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/niHalfKana.rb)|マルチインプット導入必須|
+|常用漢字Ａ|[ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/ExName/niKanji1.rb)|漢字のみ|
+|常用漢字Ａ|[ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/ExName/niKanji1.rb)|ひらがな付き|
+|全角英数|[ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/ExName/niEisu.rb)||
+|半角英数|[ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/ExName/niHalfEisu.rb)||
+|半角カタカナ|[ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/ExName/niHalfKana.rb)|マルチインプット導入必須|
 
 ## 使用準備
 
