@@ -76,7 +76,7 @@
 |文字装飾|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/ExDrawText.rb)||
 |メッセージ黒背景の変更|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/ExMessageBack.rb)||
 |メッセージスキップ|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/MessageSkip.rb)||
-|メッセージログ|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/MessageLog.rb)||
+|メッセージログ|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/MessageLog.rb)|:heavy_check_mark: [ドキュメント](docs/MessageLog.md)|
 |メッセージロール|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/MessageRoll.rb)||
 
 ## マップ関連
@@ -127,7 +127,7 @@
 |マップの画像保存|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/MapShot.rb)|:heavy_multiplication_x:|
 |行動範囲の設定|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/RestrictionArea.rb)|:heavy_multiplication_x:|
 |ラベルのサブルーチン化|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/Subroutine.rb)||
-|エセフルスクリーン|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/WndSize.rb)|:heavy_check_mark: [ドキュメント](docs/WndSize.md)|
+|エセフルスクリーン|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/WindowSize.rb)|:heavy_check_mark: [ドキュメント](docs/WindowSize.md)|
 |プレイヤーのキー操作無効|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/DisableKey.rb)|:heavy_multiplication_x:|
 |VGA プロジェクト|||
 

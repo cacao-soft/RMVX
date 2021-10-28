@@ -10,7 +10,7 @@
 
 ## スクリプト
 
-- [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/WndSize.rb)
+- [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/WindowSize.rb)
 
 ## 使用準備
 
@@ -26,7 +26,7 @@ HEIGHT=600
 
 初期化ファイルで設定ができるので、プレイヤーの好きなサイズで遊べるかな？と思ってたりします。その際は、サイズ変更を無効にしないと設定したサイズに戻れなくなります。
 
-## 拡張
+## 拡張機能
 
 ### 終了時のサイズを保存
 
