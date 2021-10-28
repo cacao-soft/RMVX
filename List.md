@@ -4,8 +4,8 @@
 
 |スクリプト名|スクリプト|ドキュメント|
 |:--|:-:|:-:|
-|Cacao Base Script|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/cbs.rb)|:heavy_check_mark:|
-|RPGツクールVX Fan Patch|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/cbs.rb)|:heavy_check_mark:|
+|Cacao Base Script|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/cbs.rb)|:heavy_check_mark: [ドキュメント](docs/cbs.md)|
+|RPGツクールVX Fan Patch|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/cbs.rb)|:heavy_check_mark: [ドキュメント](docs/cap_sp.md)|
 
 ## 開発者用
 
@@ -26,7 +26,7 @@
 |:--|:-:|:-:|
 |カスタムメニュー|||
 |＜拡張＞ ピクチャの操作|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/ExPicture.rb)||
-|＜拡張＞ 名前入力の処理|:heavy_check_mark:|:heavy_check_mark: [閲覧](docs/ExName.md)​|
+|＜拡張＞ 名前入力の処理|:heavy_check_mark:|:heavy_check_mark: [ドキュメント](docs/ExName.md)|
 |＜拡張＞ セーブ画面|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/ExSave.rb)||
 |アイテム個別所持|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/PersonalItems.rb)||
 |＜拡張＞ ＥＶ出現条件|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/ExEvent.rb)||
@@ -52,11 +52,11 @@
 |＜拡張＞ ショップステータス #2|||
 |カスタムショップステータス|||
 |装備可能クラス表示|||
-|ショップコメント|||
+|ショップコメント|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/ShopComment.rb)|:heavy_multiplication_x:|
 |ショップ店員|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/Staff2.rb)||
-|ショップアイテム分類|||
-|売却ショップ|||
-|商品準備|||
+|ショップアイテム分類|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/ShopCategorize.rb)||
+|売却ショップ|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/ShopShell.rb)||
+|商品準備|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/ShopPreparation.rb)|:heavy_multiplication_x:|
 
 ## ウィンドウ関連
 
@@ -110,22 +110,24 @@
 |:--|:-:|:-:|
 |スタートマップ|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/StartMap.rb)||
 |オープニングロゴ|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/Logo.rb)||
-|スクリーンショット|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/ScreenShot.rb)||
+|スクリーンショット|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/ScreenShot.rb)|:heavy_check_mark: [ドキュメント](docs/ScreenShot.md)|
 
 ## おまけ
 
 |スクリプト名|スクリプト|ドキュメント|
 |:--|:-:|:-:|
-|コマンドにアイコン表示|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/CommandIcon.rb)||
-|装備の固定|||
-|アイテムの所持制限|||
-|売却画面でカーソルリセット|||
-|アイテム使用予約|||
-|ショップで装備変更|||
-|セーブ・ロードの確認と完了メッセージ|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/SaveMessage.rb)||
-|リトライ機能|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/Retry.rb)||
-|マップの画像保存|||
-|行動範囲の設定|||
-|ラベルのサブルーチン化|||
-|エセフルスクリーン|||
-|プレイヤーのキー操作無効|||
+|コマンドにアイコン表示|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/CommandIcon.rb)|:heavy_multiplication_x:|
+|装備の固定|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/FixEquip.rb)|:heavy_multiplication_x:|
+|アイテムの所持制限|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/LimitItem.rb)|:heavy_multiplication_x:|
+|売却画面でカーソルリセット|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/ShopSell_ResetCur.rb)|:heavy_multiplication_x:|
+|アイテム使用予約|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/EngageItem.rb)|:heavy_multiplication_x:|
+|ショップで装備変更|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/ShopEquip.rb)|:heavy_multiplication_x:|
+|セーブ・ロードの確認と完了メッセージ|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/SaveMessage.rb)|:heavy_multiplication_x:|
+|リトライ機能|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/Retry.rb)|:heavy_multiplication_x:|
+|マップの画像保存|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/MapShot.rb)|:heavy_multiplication_x:|
+|行動範囲の設定|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/RestrictionArea.rb)|:heavy_multiplication_x:|
+|ラベルのサブルーチン化|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/Subroutine.rb)||
+|エセフルスクリーン|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/WndSize.rb)|:heavy_check_mark: [ドキュメント](docs/WndSize.md)|
+|プレイヤーのキー操作無効|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/DisableKey.rb)|:heavy_multiplication_x:|
+|VGA プロジェクト|||
+
