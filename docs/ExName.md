@@ -28,7 +28,7 @@
 |半角英数|[ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/niHalfEisu.rb)||
 |半角カタカナ|[ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/niHalfKana.rb)|マルチインプット導入必須|
 
-## 必須事項
+## 使用準備
 
 ### 導入場所
 
