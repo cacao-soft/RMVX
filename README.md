@@ -52,7 +52,7 @@
 
 |スクリプト名|スクリプト|ドキュメント|
 |:--|:-:|:-:|
-|＜拡張＞ ショップステータス|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/ShopStatus1.rb)||
+|＜拡張＞ ショップステータス|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/ShopStatus1.rb)|:heavy_check_mark: [ドキュメント](docs/ShopStatus1.md)|
 |＜拡張＞ ショップステータス #2|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/ShopStatus2.rb)|:heavy_multiplication_x:|
 |カスタムショップステータス|:heavy_check_mark:|:heavy_check_mark: [ドキュメント](docs/CustomShopStatus.md)|
 |装備可能クラス表示|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/ShopEquipClass.rb)||
