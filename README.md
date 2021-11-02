@@ -1,6 +1,6 @@
 # RPGツクールVX 用 スクリプト (RGSS2)
 
-[CACAO SOFT](http://cacaosoft.webcrow.jp/) 閉鎖に伴い、配布していたスクリプト素材を退避しています。
+[CACAO SOFT](http://cacaosoft.webcrow.jp/) の利用サーバーのサービス終了(2021.03)に伴い、配布していたスクリプト素材を退避しています。
 
 ## RGSS2 スクリプト素材一覧
 
@@ -9,7 +9,7 @@
 |スクリプト名|スクリプト|ドキュメント|
 |:--|:-:|:-:|
 |Cacao Base Script|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/cbs.rb)|:heavy_check_mark: [ドキュメント](docs/cbs.md)|
-|RPGツクールVX Fan Patch|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/cbs.rb)|:heavy_check_mark: [ドキュメント](docs/cap_sp.md)|
+|RPGツクールVX Fan Patch|:heavy_check_mark: [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/cbs.rb)|:heavy_check_mark: [ドキュメント](docs/cao_sp.md)|
 
 ### 開発者用
 
