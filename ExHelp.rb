@@ -1,5 +1,5 @@
 #=============================================================================
-#  [RGSS2] ＜拡張＞ ヘルプウィンドウ - v1.0.0
+#  [RGSS2] ＜拡張＞ ヘルプウィンドウ - v1.0.1
 # ---------------------------------------------------------------------------
 #  Copyright (c) 2022 CACAO
 #  Released under the MIT License.
@@ -23,14 +23,18 @@
 
   ★ 追加された制御文字
    アラインメント    ： \L[0-2]
+   太字色            ： \C[n]
    太字              ： \B ... \/B
    斜体              ： \I ... \/I
    下線              ： \U[n] ... \/U
+   イベント変数      ： \V[n]
    イベント変数の配列： \V[m][n]
    先頭のアクター名  ： \N[0]
+   アクター名        ： \N[n]
    sprintf           ： \F[フォーマット, 引数]
    アイコン          ： \I[n]
    所持金            ： \$
+   頭文字反復        ： \S[テキスト,句点]
    スクリプト        ： $[ ... ]$
 
   ★ 各名前のデータベース参照
@@ -46,6 +50,8 @@
    アクターの情報    ： \A[n, param]
    n (調べる ID)
    param (Game_Actor のプロパティ名) ※ class のみ .class.name
+   例）\P[0]  # パーティの先頭のアクター名
+   例）\A[3,hp]  # アクターID 3 の現在の HP
 
 =end
 
@@ -68,7 +74,7 @@ class Window_Help
     if text != @text or align != @align
       @text = text
       @align = align
-      draw_text
+      draw_styled_text
     end
   end
   #--------------------------------------------------------------------------
@@ -81,10 +87,6 @@ class Window_Help
     # スクリプト (最優先)
     text.gsub!(/\$\[(.*?)\]\$/i)   { eval($1) }
     # 置換処理
-    text.gsub!(/\$Map/i)           { $game_map.name }
-    text.gsub!(/\$Pcount/i)        { $game_party.members.size }
-    text.gsub!(/\$Step/i)          { $game_party.steps }
-    text.gsub!(/\$Save/i)          { $game_system.save_count }
     text.gsub!(/\\[\$G]/)          { $game_party.gold }
     text.gsub!(/\\V\[(\d+)\]\[(\d+)\]/i) { $game_variables[$1.to_i][$2.to_i] }
     text.gsub!(/\\V\[([0-9]+)\]/i) { $game_variables[$1.to_i] }
@@ -118,7 +120,7 @@ class Window_Help
   #--------------------------------------------------------------------------
   # ● 
   #--------------------------------------------------------------------------
-  def draw_text
+  def draw_styled_text
     self.contents.clear
     self.contents.font.color = normal_color
     self.contents.font.bold = false
@@ -190,7 +192,8 @@ class Window_Help
   # ● パラメータを取得
   #--------------------------------------------------------------------------
   def param(data_list, str_id, param)
-    data = data_list[str_id.to_i]    
+    data = data_list[str_id.to_i]
+    param ||= "name"
     if data && data.respond_to?(param)
       data = data.__send__(param)
       if param == "class" && data.respond_to?("name")
