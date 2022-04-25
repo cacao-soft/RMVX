@@ -1,5 +1,5 @@
 #=============================================================================
-#  [RGSS2] ＜拡張＞ ヘルプウィンドウ - v1.0.1
+#  [RGSS2] ＜拡張＞ ヘルプウィンドウ - v1.1.0
 # ---------------------------------------------------------------------------
 #  Copyright (c) 2022 CACAO
 #  Released under the MIT License.
@@ -15,13 +15,10 @@
 
   ヘルプウィンドウで使用できる制御文字を追加します。
 
- -- 注意事項 ----------------------------------------------------------------
-
-  ※ ２行以上のヘルプウィンドウは想定しておりません。
-
  -- 使用方法 ----------------------------------------------------------------
 
   ★ 追加された制御文字
+   改行              ： \n か \|
    アラインメント    ： \L[0-2]
    太字色            ： \C[n]
    太字              ： \B ... \/B
@@ -115,10 +112,12 @@ class Window_Help
     text.gsub!(/\\\/I/i)           { "\x06" }
     text.gsub!(/\\B/i)             { "\x03" }
     text.gsub!(/\\\/B/i)           { "\x04" }
+    #
+    text.gsub!(/\\[n|]|\r?\n/)     { "\x00" }         # 改行
     return text
   end
   #--------------------------------------------------------------------------
-  # ● 
+  # ● 書式付きテキストの描画
   #--------------------------------------------------------------------------
   def draw_styled_text
     self.contents.clear
@@ -126,22 +125,13 @@ class Window_Help
     self.contents.font.bold = false
     self.contents.font.italic = false
     text = convert_special_characters
-    x = 0
-    # 
-    align = (text[/\x13\[([0-2]+)\]/i, 1] || @align).to_i
-    if align > 0
-      t = text.match(/[\x00\r\n]/) ? $` : text.dup
-      t.gsub!(/[\x00-\x1F\x80-\xFF]\[.+?\]/, "")
-      t.gsub!(/./m) {|c| (c.size == 1 && /[\x20-\x7e]/ !~ c) ? "" : c }
-      width = contents.width - x - contents.text_size(t).width
-      width /= 2 if align == 1
-      x += width
-    end
-    # 
+    x = start_line_x(text)
+    y = 0
     while c = text.slice!(/./m)         # 次の文字を取得
       case c
-      when "0x00","\r","\n"
-        x = 0
+      when "\x00","\r","\n"
+        x = start_line_x(text)
+        y += WLH
       when "\x01"                       # \C[n]  (文字色変更)
         text.sub!(/\[([0-9]+)\]/, "")
         contents.font.color = text_color($1.to_i)
@@ -149,7 +139,7 @@ class Window_Help
         text.sub!(/\[([0-9]+)\]/, "")
         index = $1.to_i
         rect = Rect.new(index % 16 * 24, index / 16 * 24, 24, 24)
-        contents.blt(x, 0, Cache.system("Iconset"), rect)
+        contents.blt(x, y, Cache.system("Iconset"), rect)
         x += 24
       when "\x03"                       # \B  (太字)
         contents.font.bold = true
@@ -170,13 +160,29 @@ class Window_Help
       else                              # 普通の文字
         c_width = contents.text_size(c).width
         if @under_line
-          rect = Rect.new(x-2, 0+WLH-1, c_width+4, 1)
+          rect = Rect.new(x-2, y+WLH-1, c_width+4, 1)
           contents.fill_rect(rect, @line_color)
         end
-        contents.draw_text(x, 0, 40, WLH, c)
+        contents.draw_text(x, y, 40, WLH, c)
         x += c_width
       end
     end
+  end
+  #--------------------------------------------------------------------------
+  # ● 開始 x 座標を取得
+  #--------------------------------------------------------------------------
+  def start_line_x(text)
+    line = text.match(/[\x00\r\n]/) ? $` : text.dup
+    x = 0
+    align = (line[/\x13\[([0-2]+)\]/i, 1] || @align).to_i
+    if align > 0
+      line.gsub!(/[\x00-\x1F\x80-\xFF]\[.+?\]/, "")
+      line.gsub!(/./m) {|c| (c.size == 1 && /[\x20-\x7e]/ !~ c) ? "" : c }
+      width = contents.width - x - contents.text_size(line).width
+      width /= 2 if align == 1
+      x += width
+    end
+    return x
   end
   #--------------------------------------------------------------------------
   # ● 頭文字の反復
@@ -193,7 +199,7 @@ class Window_Help
   #--------------------------------------------------------------------------
   def param(data_list, str_id, param)
     data = data_list[str_id.to_i]
-    param ||= "name"
+    param = "name" if param == nil || param == ""
     if data && data.respond_to?(param)
       data = data.__send__(param)
       if param == "class" && data.respond_to?("name")
