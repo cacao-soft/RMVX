@@ -1,9 +1,9 @@
 #=============================================================================
-#  [RGSS2] エセフルスクリーン - v1.0.0
+#  [RGSS2] エセフルスクリーン - v1.1.0
 # ---------------------------------------------------------------------------
 #  Copyright (c) 2021 CACAO
 #  Released under the MIT License.
-#  https://opensource.org/licenses/mit-license.php
+#  https://github.com/cacao-soft/RMVX/blob/main/LICENSE
 # ---------------------------------------------------------------------------
 #  [Twitter] https://twitter.com/cacao_soft/
 #  [GitHub]  https://github.com/cacao-soft/
@@ -14,7 +14,6 @@
  -- 概    要 ----------------------------------------------------------------
 
   ウィンドウのサイズを変更する機能を追加します。
-  ゲーム解像度 -> 800x600 -> フルサイズ の順に変更を行います。
 
  -- 注意事項 ----------------------------------------------------------------
 
@@ -26,7 +25,6 @@
    ウィンドウを中央に移動し、指定されたサイズに変更します。
    引数が負数、もしくはデスクトップより大きい場合はフルサイズで表示されます。
    処理が失敗すると false を返します。
-
 
 =end
 
@@ -41,18 +39,28 @@ module WND_SIZE
   #     0 .. サイズ変更を行わない
   #--------------------------------------------------------------------------
   INPUT_KEY = Input::F5
-  
   #--------------------------------------------------------------------------
-  # ◇ 初期サイズ
+  # ◇ サイズリスト
   #--------------------------------------------------------------------------
-  #     0    .. 初期サイズ変更を行わない。
-  #     1    .. 初期化ファイル (Game.ini) の設定を使用する。
-  #             セクション : Window    キー : WIDTH, HEIGHT
-  #     2    .. データファイル (Game.rvdata) の設定を使用する。
-  #             内容は、クライアント領域の Rect オブジェクトです。
-  #     配列 .. [width, height] の値で変更する。
+  #     [ [横幅, 縦幅], ... ] のような二次元配列で設定します。
+  #     幅を 0 にするとゲーム解像度サイズになります。
+  #     幅を -1 にするとデスクトップサイズになります。
   #--------------------------------------------------------------------------
-  INIT_SIZE = 0
+  SIZE_LIST = [[0, 0], [Graphics.width * 2, Graphics.height * 2], [-1, -1]]
+  #--------------------------------------------------------------------------
+  # ◇ セーブファイル
+  #--------------------------------------------------------------------------
+  #   ウィンドウサイズの状況を保存するファイル名を設定します。
+  #   nil にすると、サイズを保存しません。
+  #--------------------------------------------------------------------------
+  FILE_SAVE = "wndsz"
+  #--------------------------------------------------------------------------
+  # ◇ 構成設定ファイル
+  #--------------------------------------------------------------------------
+  #   セクション名 [Window] キー WIDTH=横幅  HEIGHT=縦幅 を読み込みます。
+  #   nil にすると、サイズを保存しません。
+  #--------------------------------------------------------------------------
+  FILE_INI = nil
 end
 
 
@@ -97,10 +105,8 @@ module WLIB
   #--------------------------------------------------------------------------
   # ● ウィンドウの情報
   #--------------------------------------------------------------------------
-  unless $!
-    GAME_TITLE  = NKF.nkf("-sxm0", load_data("Data/System.rvdata").game_title)
-    GAME_HANDLE = @@FindWindow.call("RGSS Player", GAME_TITLE)
-  end
+  GAME_TITLE  = NKF.nkf("-sxm0", load_data("Data/System.rvdata").game_title)
+  GAME_HANDLE = @@FindWindow.call("RGSS Player", GAME_TITLE)
   GAME_STYLE   = @@GetWindowLong.call(GAME_HANDLE, -16)
   GAME_EXSTYLE = @@GetWindowLong.call(GAME_HANDLE, -20)
   HDSK = @@GetDesktopWindow.call
@@ -201,6 +207,8 @@ module_function
   # ● ウィンドウのサイズを変更
   #--------------------------------------------------------------------------
   def SetGameWindowSize(width, height)
+  	width = Graphics.width if width == 0
+  	height = Graphics.height if height == 0
     # 各領域の取得
     dr = GetDesktopRect()         # Rect デスクトップ
     wr = GetGameWindowRect()      # Rect ウィンドウ
@@ -227,38 +235,71 @@ end
 
 class Scene_Base
   #--------------------------------------------------------------------------
+  # ● クラス変数
+  #--------------------------------------------------------------------------
+  @@screen_mode = 0     # スクリーンモード (ユーザー設定のインデックス)
+  #--------------------------------------------------------------------------
+  # ● ユーザー設定からスクリーンサイズを設定
+  #--------------------------------------------------------------------------
+  def self.screen_mode=(index)
+    @@screen_mode = index % WND_SIZE::SIZE_LIST.size
+  end
+  #--------------------------------------------------------------------------
+  # ● スクリーンサイズのインデックスを取得
+  #--------------------------------------------------------------------------
+  def self.screen_mode
+    @@screen_mode
+  end
+  #--------------------------------------------------------------------------
   # ○ フレーム更新
   #--------------------------------------------------------------------------
   alias _cao_update_wndsize update
   def update
     _cao_update_wndsize
-    if Input.trigger?(WND_SIZE::INPUT_KEY)
-      case WLIB::GetGameClientRect().width
-      when Graphics.width
-        width, height = 800, 600
-      when 800
-        width, height = -1, -1
+    if Input.trigger?(WND_SIZE::INPUT_KEY) && WLIB::GAME_HANDLE != 0
+      Scene_Base.screen_mode += 1
+      if WLIB::SetGameWindowSize(*WND_SIZE::SIZE_LIST[@@screen_mode])
+        if WND_SIZE::FILE_SAVE
+          save_data(Scene_Base.screen_mode, WND_SIZE::FILE_SAVE)
+        end
       else
-        width, height = Graphics.width, Graphics.height
-      end
-      unless WLIB::SetGameWindowSize(width, height)
         Sound.play_buzzer
       end
     end
   end
 end
 
-# 初期サイズの設定
-case WND_SIZE::INIT_SIZE
-when 1
-  width = IniFile.read("Game", "Window", "WIDTH", Graphics.width).to_i
-  height = IniFile.read("Game", "Window", "HEIGHT", Graphics.height).to_i
-  WLIB::SetGameWindowSize(width, height)
-when 2
-  if FileTest.exist?("Game.rvdata")
-    r = load_data("Game.rvdata")
-    WLIB::SetGameWindowSize(r.width, r.height)
+module WND_SIZE
+  #--------------------------------------------------------------------------
+  # ● 大きいサイズを除去
+  #--------------------------------------------------------------------------
+  def self.remove_large_window
+    dr = WLIB::GetDesktopRect()
+    WND_SIZE::SIZE_LIST.reject! do |wsz|
+      wsz.size != 2 || dr.width < wsz[0] || dr.height < wsz[1]
+    end
+    if WND_SIZE::SIZE_LIST.empty?
+      WND_SIZE::SIZE_LIST << [Graphics.width, Graphics.height]
+    end
   end
-when Array
-  WLIB::SetGameWindowSize(WND_SIZE::INIT_SIZE[0], WND_SIZE::INIT_SIZE[1])
+  #--------------------------------------------------------------------------
+  # ● 初期サイズの設定
+  #--------------------------------------------------------------------------
+  def self.init_window_size
+    if WND_SIZE::FILE_SAVE && File.file?(WND_SIZE::FILE_SAVE)
+      # 前回のサイズを復元
+      Scene_Base.screen_mode = load_data(WND_SIZE::FILE_SAVE)
+      WLIB::SetGameWindowSize(*WND_SIZE::SIZE_LIST[Scene_Base.screen_mode])
+    elsif WND_SIZE::FILE_INI
+      # 構成設定からサイズを読み込む (サイズを記録していない場合のみ)
+      width = IniFile.read(WND_SIZE::FILE_INI, "Window", "WIDTH", "")
+      height = IniFile.read(WND_SIZE::FILE_INI, "Window", "HEIGHT", "")
+      if width != "" && height != ""
+        WLIB::SetGameWindowSize(width.to_i, height.to_i)
+      end
+    end
+  end
 end
+
+WND_SIZE.remove_large_window
+WND_SIZE.init_window_size
