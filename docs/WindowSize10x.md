@@ -1,6 +1,6 @@
-# エセフルスクリーン
+# エセフルスクリーン v1.0.x
 
-ゲームウィンドウのサイズを変更する機能を追加します。
+ゲームウィンドウのサイズを解像度・800x600・フルサイズの順に変更する機能を追加します。
 
 ## スクリーンショット
 
@@ -10,69 +10,49 @@
 
 ## スクリプト
 
-- [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/WindowSize.rb)
-- [旧バージョン v1.0.x](WindowSize10x.md)
+- [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/0bb15ea76ae6e2bf499a7c666067a4bc3aa2eea9/wndSize.rb)
 
-## 設定項目
+## 使用準備
 
-### サイズ変更キー
+### 初期化ファイルの設定
 
-```rb
-INPUT_KEY = Input::F5
+初期化ファイルの設定を使用して、初期サイズを変更する場合は[初期化ファイルの操作](https://raw.githubusercontent.com/cacao-soft/RMVX/main/ExFile.rb)スクリプトを導入し、`Game.ini`ファイルに次の３行を追加します。
 ```
-
-`Input::F5` `Input::F6` `Input::F7` `Input::F8` などが設定できます。
-サイズ変更を行わない場合は、`0`としてください。
-
-### サイズ変更キー
-
-```rb
-SIZE_LIST = [[0, 0], [Graphics.width * 2, Graphics.height * 2], [-1, -1]]
-```
-
-変更できるサイズのリストです。変更キーが押されるたびに左から順番にサイズ変更が行われます。
-デフォルトでは、ゲーム解像度の`等倍 -> ２倍 -> デスクトップサイズ`の順に切り替えます。
-
-`[横幅,縦幅]`がセットで、最初のサイズが初期サイズとなります。
-幅を`0`にするとゲーム解像度サイズ、`-1`にするとデスクトップサイズになります。
-
-#### 注意
-
-- 快適なプレイのためゲームの解像度と同じサイズは設定するようにしてください。  
-- 変更後の画質は、環境に依存します。解像度の２倍サイズは、どの環境でも比較的きれいに表示されると思います。  
-- 画面内に納まらない大きいサイズは除外されます。
-
-### セーブファイル
-
-```rb
-FILE_SAVE = "wndsz"
-```
-
-指定されたファイル名で現在のサイズ情報を保存します。`nil`にすると、サイズを変更しません。  
-
-#### 注意
-
-- フォルダは作成されませんので、ファイル名のみの設定を推奨します。
-
-### 構成設定ファイル
-
-```rb
-FILE_INI = nil
-```
-
-構成設定ファイルを使用して、初期サイズを変更する場合は[初期化ファイルの操作](https://raw.githubusercontent.com/cacao-soft/RMVX/main/ExFile.rb)スクリプトを導入し、`Game.ini`ファイルに次の３行を追加します。
-
-```ini
 [Window]
 WIDTH=800
 HEIGHT=600
 ```
-
 数値部分がウィンドウのサイズとなりますので、変更してください。
 
 初期化ファイルで設定ができるので、プレイヤーの好きなサイズで遊べるかな？と思ってたりします。その際は、サイズ変更を無効にしないと設定したサイズに戻れなくなります。
 
 ## 拡張機能
+
+### 終了時のサイズを保存
+
+Main セクションを以下のように変更します。
+```ruby
+begin
+  (中略)
+rescue Errno::ENOENT
+  (中略)
+rescue SystemExit
+  $scene = nil
+end
+
+case WND_SIZE::INIT_SIZE
+when 1
+  r = WLIB::GetGameClientRect()
+  IniFile.write("Game", "Window", "WIDTH", r.width)
+  IniFile.write("Game", "Window", "HEIGHT", r.height)
+when 2
+  save_data(WLIB::GetGameClientRect(), "Game.rvdata")
+end
+```
+
+### 切り替えサイズの変更
+
+サイズ変更は、スクリプトの下の`Scene_Base#update`で、現在の横幅を調べて次のサイズに変更するという処理を行っています。ここの分岐を増やすなり変更すると切り替えサイズの変更が可能です。ただし、横幅しか調べてないので横幅は同じで縦幅だけ違うなんて変更はできません。`-1`というのは、フルサイズ指定してます。else のところは、変更しないようにしてください。
 
 ### 位置情報も変更
 
@@ -119,7 +99,7 @@ WLIB::MoveGameWindowCenter()
 ```
 WLIB::GetDesktopRect()
 ```
-デスクトップの位置とサイズを取得します。処理が成功すると、Rect オブジェクトを返します。失敗した場合は、nil が返ります。
+デスクトップの位置とサイズを取得します。処理が成功すると、Rect オブジェクトを返します。　失敗した場合は、nil が返ります。
 
 ```
 WLIB::GetGameWindowRect()
