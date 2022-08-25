@@ -9,7 +9,7 @@
 |スクリプト名|スクリプト|ドキュメント|
 |:--|:-:|:-:|
 |Cacao Base Script|[ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/cbs.rb)|[ドキュメント](docs/cbs.md)|
-|RPGツクールVX Fan Patch|[ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/cbs.rb)|[ドキュメント](docs/cao_sp.md)|
+|RPGツクールVX Fan Patch|[ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/cao_sp.rb)|[ドキュメント](docs/cao_sp.md)|
 
 ### 開発者用
 
