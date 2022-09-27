@@ -1,9 +1,8 @@
 #=============================================================================
-#  [RGSS2] エセフルスクリーン - v1.1.0
+#  [RGSS2] エセフルスクリーン - v1.1.1
 # ---------------------------------------------------------------------------
 #  Copyright (c) 2021 CACAO
-#  Released under the MIT License.
-#  https://github.com/cacao-soft/RMVX/blob/main/LICENSE
+#  Released under the MIT License. see https://opensource.org/licenses/MIT
 # ---------------------------------------------------------------------------
 #  [Twitter] https://twitter.com/cacao_soft/
 #  [GitHub]  https://github.com/cacao-soft/
@@ -251,12 +250,27 @@ class Scene_Base
     @@screen_mode
   end
   #--------------------------------------------------------------------------
+  # ● フルスクリーン表示になっているか
+  #--------------------------------------------------------------------------
+  def fullscreen?
+    WLIB::GetSystemMetrics(0) == 640 && WLIB::GetSystemMetrics(1) == 480
+  end
+  #--------------------------------------------------------------------------
+  # ● ウィンドウサイズを変更するか
+  #--------------------------------------------------------------------------
+  def change_window_size?
+    return false unless Input.trigger?(WND_SIZE::INPUT_KEY)
+    return false if WLIB::GAME_HANDLE == 0
+    return false if fullscreen?
+    return true
+  end
+  #--------------------------------------------------------------------------
   # ○ フレーム更新
   #--------------------------------------------------------------------------
   alias _cao_update_wndsize update
   def update
     _cao_update_wndsize
-    if Input.trigger?(WND_SIZE::INPUT_KEY) && WLIB::GAME_HANDLE != 0
+    if change_window_size?
       Scene_Base.screen_mode += 1
       if WLIB::SetGameWindowSize(*WND_SIZE::SIZE_LIST[@@screen_mode])
         if WND_SIZE::FILE_SAVE
