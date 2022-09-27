@@ -113,7 +113,7 @@
 |スクリプト名|スクリプト|ドキュメント|
 |:--|:-:|:-:|
 |スタートマップ|[ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/StartMap.rb)||
-|オープニングロゴ|[ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/Logo.rb)||
+|オープニングロゴ|[ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/Logo.rb)|[ドキュメント](docs/Logo.md)|
 |スクリーンショット|[ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/ScreenShot.rb)|[ドキュメント](docs/ScreenShot.md)|
 
 ### おまけ
@@ -130,7 +130,7 @@
 |リトライ機能|[ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/Retry.rb)|:x:|
 |マップの画像保存|[ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/MapShot.rb)|:x:|
 |行動範囲の設定|[ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/RestrictionArea.rb)|:x:|
-|ラベルのサブルーチン化|[ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/Subroutine.rb)||
+|ラベルのサブルーチン化|[ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/Subroutine.rb)|[ドキュメント](docs/Subroutine.md)|
 |エセフルスクリーン|[ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/WindowSize.rb)|[ドキュメント](docs/WindowSize.md)|
 |プレイヤーのキー操作無効|[ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/DisableKey.rb)|:x:|
 |VGA プロジェクト|||
