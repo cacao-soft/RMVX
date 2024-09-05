@@ -3,7 +3,7 @@
 # ---------------------------------------------------------------------------
 #  Copyright (c) 2021 CACAO
 #  Released under the MIT License.
-#  https://opensource.org/licenses/mit-license.php
+#  https://opensource.org/license/mit
 # ---------------------------------------------------------------------------
 #  [Twitter] https://twitter.com/cacao_soft/
 #  [GitHub]  https://github.com/cacao-soft/
@@ -144,7 +144,7 @@ class Window_ShopStatus
   def page_max
     return 1
   end
-  
+
   #--------------------------------------------------------------------------
   # ● パーティの配列を取得
   #--------------------------------------------------------------------------
@@ -164,25 +164,25 @@ class Window_ShopStatus
     @__dummy_members = dummy_members
   end
   #--------------------------------------------------------------------------
-  # ● 
+  # ●
   #--------------------------------------------------------------------------
   def each_members!
     return unless block_given?
     members.size.times do |i|
-      yield $game_party.members[i],@__dummy_members[i],i
+      yield $game_party.members[i], @__dummy_members[i], i
     end
   end
   #--------------------------------------------------------------------------
-  # ● 
+  # ●
   #--------------------------------------------------------------------------
   def each_members
     return unless block_given?
     dm = dummy_members
     members.size.times do |i|
-      yield $game_party.members[i],dm[i],i
+      yield $game_party.members[i],dm[i], i
     end
   end
-  
+
   #--------------------------------------------------------------------------
   # ● 元と装備変更後のパラメータを配列で取得
   #--------------------------------------------------------------------------
@@ -251,7 +251,7 @@ class Window_ShopStatus
       return super
     end
   end
-  
+
   #--------------------------------------------------------------------------
   # ○ フレーム更新
   #--------------------------------------------------------------------------
@@ -274,7 +274,7 @@ class Window_ShopStatus
       refresh
     end
   end
-  
+
   #--------------------------------------------------------------------------
   # ○ リフレッシュ
   #--------------------------------------------------------------------------
@@ -317,7 +317,7 @@ class Window_ShopStatus
   def draw_armor_parameter
     draw_equip_parameter
   end
-  
+
   #--------------------------------------------------------------------------
   # ● 所持数の描画
   #--------------------------------------------------------------------------
@@ -368,12 +368,12 @@ class Window_ShopStatus
     else
       opacity = 128
     end
-    
+
     back_color = Color.new(0, 0, 0, opacity)
     self.contents.fill_rect(x, y, 24, 24, back_color)
     back_color.set(255, 255, 255, opacity)
     self.contents.fill_rect(x + 1, y + 1, 22, 22, back_color)
-    
+
     return unless actor
     if FILE_ACTOR_ICON.empty?
       return unless actor.character_name
@@ -396,7 +396,7 @@ class Window_ShopStatus
     return unless actor
     return unless actor.equips.include?(@item)
     return if FILE_EQUIP_ICON.empty?
-    
+
     bitmap = Cache.system(FILE_EQUIP_ICON)
     x -= (bitmap.width - size) / 2
     y -= (bitmap.height - size) / 2
@@ -534,7 +534,7 @@ class Game_Actor
         @extra_armor_id[equip_type - 5] = item_id
       end
     end
-    
+
     restore_battle_skill if $imported["SkillCPSystem"]
   end
 end
