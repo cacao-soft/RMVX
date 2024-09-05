@@ -3,7 +3,7 @@
 # ---------------------------------------------------------------------------
 #  Copyright (c) 2021 CACAO
 #  Released under the MIT License.
-#  https://opensource.org/licenses/mit-license.php
+#  https://opensource.org/license/mit
 # ---------------------------------------------------------------------------
 #  [Twitter] https://twitter.com/cacao_soft/
 #  [GitHub]  https://github.com/cacao-soft/
@@ -27,7 +27,7 @@
    初期値は nil です。
    Scene_Interrupt::WINDOW_Z は、スプライトのクラスのｚ座標です。
    割り込みシーンで使用する Sprite や Window は、この値を基準とします。
-   
+
   ★ 割り込みシーンの処理を開始する。
    result = Scene_○○.new のように開始します。
    new の戻り値が返るときには、処理はすべて終わっているので
