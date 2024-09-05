@@ -3,7 +3,7 @@
 # ---------------------------------------------------------------------------
 #  Copyright (c) 2021 CACAO
 #  Released under the MIT License.
-#  https://opensource.org/licenses/mit-license.php
+#  https://opensource.org/license/mit
 # ---------------------------------------------------------------------------
 #  [Twitter] https://twitter.com/cacao_soft/
 #  [GitHub]  https://github.com/cacao-soft/
@@ -67,26 +67,26 @@
 # Win32API の読み込み
 class IniFile
   # INI ファイルの内容を数値で取得
-  GetPrivateProfileInt = 
+  GetPrivateProfileInt =
     Win32API.new('kernel32','GetPrivateProfileInt','ppip','i')
   # INI ファイルの内容を文字列で取得
-  GetPrivateProfileString = 
+  GetPrivateProfileString =
     Win32API.new('kernel32','GetPrivateProfileString','pppplp','l')
   # セクション内のキーと値を取得
-  GetPrivateProfileSection = 
+  GetPrivateProfileSection =
     Win32API.new('kernel32','GetPrivateProfileSection','pplp','l')
   # 全セクション名の取得
   GetPrivateProfileSectionNames =
     Win32API.new('kernel32','GetPrivateProfileSectionNames','plp','l')
-    
+
   # INI ファイルの内容の書き込み
-  WritePrivateProfileString = 
+  WritePrivateProfileString =
     Win32API.new('kernel32','WritePrivateProfileString','pppp','i')
   # セクションの書き込み
-  WritePrivateProfileSection = 
+  WritePrivateProfileSection =
     Win32API.new('kernel32','WritePrivateProfileSection','ppp','i')
-  
-  
+
+
   # 定数の定義
   BUFFER_S = 'Z256'
   BUFFER_L = 'Z32768'
