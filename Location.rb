@@ -3,7 +3,7 @@
 # ---------------------------------------------------------------------------
 #  Copyright (c) 2021 CACAO
 #  Released under the MIT License.
-#  https://opensource.org/licenses/mit-license.php
+#  https://opensource.org/license/mit
 # ---------------------------------------------------------------------------
 #  [Twitter] https://twitter.com/cacao_soft/
 #  [GitHub]  https://github.com/cacao-soft/
@@ -287,7 +287,7 @@ class Sprite_LocationName
   #--------------------------------------------------------------------------
   # ● 定数
   #--------------------------------------------------------------------------
-  EX_HEIGHT = TEXT_SIZE + 8               # 
+  EX_HEIGHT = TEXT_SIZE + 8               #
   IMAGE_BACKGROUND = "LocationWindow"     # 背景画像のファイル名
   #--------------------------------------------------------------------------
   # ● クラス変数
@@ -411,7 +411,7 @@ class Sprite_LocationName
     if $game_system.elapsed_time == 0
       @location_sprite.ox += SLIDE_SPEED
       if @location_sprite.ox >= @img_width
-        @location_sprite.ox = @img_width 
+        @location_sprite.ox = @img_width
         $game_system.elapsed_time = 1
       end
     elsif $game_system.elapsed_time <= LOCATION_WAIT
