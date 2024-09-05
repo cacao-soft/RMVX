@@ -3,7 +3,7 @@
 # ---------------------------------------------------------------------------
 #  Copyright (c) 2021 CACAO
 #  Released under the MIT License.
-#  https://opensource.org/licenses/mit-license.php
+#  https://opensource.org/license/mit
 # ---------------------------------------------------------------------------
 #  [Twitter] https://twitter.com/cacao_soft/
 #  [GitHub]  https://github.com/cacao-soft/
@@ -15,7 +15,7 @@
   デフォルトでは、０の設定は使用されません。
   ８倍速の設定は、プレイヤーの速度が４倍速でダッシュを行った際に使用されます。
   ダッシュが許可されているのは、プレイヤーのみで乗り物には適用されていないと思います。
-  
+
   デフォルトでは以下のように設定されています。
     歩行：標準速
     ダッシュ：２倍速 (設定されている歩行速度によって変化します。)
@@ -34,7 +34,7 @@ class Game_Character
   #--------------------------------------------------------------------------
   def update_move
     # 移動速度から移動距離に変換 (ダッシュ状態なら１つ上の速度に)
-    distance = MOVE_SPEED_LIST[@move_speed + (dash? ? 1 : 0)]   
+    distance = MOVE_SPEED_LIST[@move_speed + (dash? ? 1 : 0)]
     @real_x = [@real_x - distance, @x * 256].max if @x * 256 < @real_x
     @real_x = [@real_x + distance, @x * 256].min if @x * 256 > @real_x
     @real_y = [@real_y - distance, @y * 256].max if @y * 256 < @real_y
