@@ -3,7 +3,7 @@
 # ---------------------------------------------------------------------------
 #  Copyright (c) 2021 CACAO
 #  Released under the MIT License.
-#  https://opensource.org/licenses/mit-license.php
+#  https://opensource.org/license/mit
 # ---------------------------------------------------------------------------
 #  [Twitter] https://twitter.com/cacao_soft/
 #  [GitHub]  https://github.com/cacao-soft/
@@ -22,19 +22,19 @@
 # ◆ 設定項目
 #==============================================================================
 class Window_Message
-  
+
   # スキップ禁止スイッチの番号
   SKIP_SW_NUM = 14
-  
+
   # スキップするボタン (Ctrlキー)
   SKIP_BUTTON = Input::CTRL
-  
+
   # スキップに掛ける時間
   SKIP_WAIT = 10
-  
+
   # 戦闘中は無効
   DISABLE_IN_BATTLE = true
-  
+
 end
 
 
