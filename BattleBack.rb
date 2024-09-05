@@ -3,7 +3,7 @@
 # ---------------------------------------------------------------------------
 #  Copyright (c) 2021 CACAO
 #  Released under the MIT License.
-#  https://opensource.org/licenses/mit-license.php
+#  https://opensource.org/license/mit
 # ---------------------------------------------------------------------------
 #  [Twitter] https://twitter.com/cacao_soft/
 #  [GitHub]  https://github.com/cacao-soft/
@@ -73,13 +73,13 @@ module BattleBack
   # ◇ 画像設定
   #--------------------------------------------------------------------------
     IMG_BACK = {} # この行は消さないでください。
-    
+
     # 固定画像 (ファイル名のみ変更可)
     IMG_BACK[0] = ""
-    
+
     # ユーザー登録画像 (追加削除可)
     IMG_BACK[18] = "Mountains"
-    
+
     IMG_BACK["海"] = "Ocean"
     IMG_BACK["山"] = "Mountains"
 end
