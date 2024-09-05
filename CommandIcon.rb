@@ -3,7 +3,7 @@
 # ---------------------------------------------------------------------------
 #  Copyright (c) 2021 CACAO
 #  Released under the MIT License.
-#  https://opensource.org/licenses/mit-license.php
+#  https://opensource.org/license/mit
 # ---------------------------------------------------------------------------
 #  [Twitter] https://twitter.com/cacao_soft/
 #  [GitHub]  https://github.com/cacao-soft/
@@ -30,18 +30,18 @@ module CAO_COMMAND
     NUMBER_GUARDICON    = 52        # 防御
     NUMBER_SKILLICON    = 128       # スキル
     NUMBER_ITEMICON     = 144       # アイテム
-   
+
     NUMBER_EQUIPICON    = 40        # 装備
     NUMBER_STATUSICON   = 129       # ステータス
     NUMBER_SAVEICON     = 159       # セーブ
     NUMBER_GAMEENDICON  = 112       # やめる
     NUMBER_FIGHTICON    = 131       # 戦う
     NUMBER_ESCAPEICON   = 136       # 逃げる
-    
+
     NUMBER_NEWGAMEICON  = 153       # ニューゲーム
     NUMBER_CONTINUEICON = 154       # コンティニュー
     NUMBER_SHUTDOWNICON = 155       # シャットダウン
-    
+
     NUMBER_GOLDICON     = 147       # ゴールド
 end
 
@@ -72,7 +72,7 @@ class Window_Command < Window_Selectable
     self.contents.clear_rect(rect)
     self.contents.font.color = normal_color
     self.contents.font.color.alpha = enabled ? 255 : 128
-    
+
     # 描画する項目の先頭に"<番号>"が含まれているなら
     if @commands && /^<(\d+)>/ =~ @commands[index].to_s
       # 項目の左にアイコンを追加
