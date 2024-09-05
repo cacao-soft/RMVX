@@ -3,7 +3,7 @@
 # ---------------------------------------------------------------------------
 #  Copyright (c) 2021 CACAO
 #  Released under the MIT License.
-#  https://opensource.org/licenses/mit-license.php
+#  https://opensource.org/license/mit
 # ---------------------------------------------------------------------------
 #  [Twitter] https://twitter.com/cacao_soft/
 #  [GitHub]  https://github.com/cacao-soft/
@@ -44,7 +44,7 @@ module CAO::Picture
   #   %N : セーブ番号(00)      例）"ScreenShot/Save%N"
   #--------------------------------------------------------------------------
   SS_DIRECTORY = "ScreenShot"
-  
+
   #--------------------------------------------------------------------------
   # ◇ 保存ファイル名
   #--------------------------------------------------------------------------
