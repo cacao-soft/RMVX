@@ -3,7 +3,7 @@
 # ---------------------------------------------------------------------------
 #  Copyright (c) 2021 CACAO
 #  Released under the MIT License.
-#  https://opensource.org/licenses/mit-license.php
+#  https://opensource.org/license/mit
 # ---------------------------------------------------------------------------
 #  [Twitter] https://twitter.com/cacao_soft/
 #  [GitHub]  https://github.com/cacao-soft/
@@ -183,25 +183,25 @@ end
 
 module CAO::Staff::WindowEx
   #--------------------------------------------------------------------------
-  # ● 
+  # ●
   #--------------------------------------------------------------------------
   def open
     self.visible = true
   end
   #--------------------------------------------------------------------------
-  # ● 
+  # ●
   #--------------------------------------------------------------------------
   def close
     self.visible = false
   end
   #--------------------------------------------------------------------------
-  # ● 
+  # ●
   #--------------------------------------------------------------------------
   def show
     self.visible = true
   end
   #--------------------------------------------------------------------------
-  # ● 
+  # ●
   #--------------------------------------------------------------------------
   def hide
     self.visible = false
@@ -253,31 +253,31 @@ class Scene_Shop < Scene_Interrupt
     @sell_window = Window_ShopSell.new(0, 56)
     @number_window = Window_ShopNumber.new(0, 56)
     @status_window = Window_ShopStatus.new(304, 56)
-    
+
     if CAO::Staff::SLIDE_OPEN
       @comment_window.slide_type = 4
       @buy_window.slide_type = 4
       @sell_window.slide_type = 4
       @status_window.slide_type = 6
-      
+
       @comment_window.slide_speed = 4
       @buy_window.slide_speed = 4
       @sell_window.slide_speed = 4
       @status_window.slide_speed = 4
     end
-    
+
     unless CAO::Staff::SHOW_WINDOW
       @command_window.opacity = 0
       @help_window.opacity = 0
       @gold_window.opacity = 0
-      
+
       @comment_window.background = CAO::Staff::IMG_COMMENT
       @buy_window.background = CAO::Staff::IMG_BUY
       @sell_window.background = CAO::Staff::IMG_SELL
       @status_window.background = CAO::Staff::IMG_STATUS
       @number_window.background = CAO::Staff::IMG_NUMBER
     end
-    
+
     @buy_window.active = false
     @buy_window.hide
     @buy_window.help_window = @help_window
