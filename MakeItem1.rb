@@ -3,7 +3,7 @@
 # ---------------------------------------------------------------------------
 #  Copyright (c) 2021 CACAO
 #  Released under the MIT License.
-#  https://opensource.org/licenses/mit-license.php
+#  https://opensource.org/license/mit
 # ---------------------------------------------------------------------------
 #  [Twitter] https://twitter.com/cacao_soft/
 #  [GitHub]  https://github.com/cacao-soft/
@@ -80,7 +80,7 @@ class Game_Interpreter
   alias _cao_command_118_refine command_118
   def command_118
     if /^<アイテム精製>/ =~ @params[0]
-      $game_temp.scene_refine = true 
+      $game_temp.scene_refine = true
     else
       return _cao_command_118_refine
     end
@@ -151,7 +151,7 @@ class Window_Base < Window
       else
         return result
       end
-    end      
+    end
   end
   def draw_material(kind, dis, no, line, dif, num)
     y = 28 * ( @mindex + line )
