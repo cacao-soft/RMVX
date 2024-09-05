@@ -2,7 +2,8 @@
 #  [RGSS2] エセフルスクリーン - v1.1.1
 # ---------------------------------------------------------------------------
 #  Copyright (c) 2021 CACAO
-#  Released under the MIT License. see https://opensource.org/licenses/MIT
+#  Released under the MIT License.
+#  https://opensource.org/license/mit
 # ---------------------------------------------------------------------------
 #  [Twitter] https://twitter.com/cacao_soft/
 #  [GitHub]  https://github.com/cacao-soft/
