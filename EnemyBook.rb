@@ -3,7 +3,7 @@
 # ---------------------------------------------------------------------------
 #  Copyright (c) 2021 CACAO
 #  Released under the MIT License.
-#  https://opensource.org/licenses/mit-license.php
+#  https://opensource.org/license/mit
 # ---------------------------------------------------------------------------
 #  [Twitter] https://twitter.com/cacao_soft/
 #  [GitHub]  https://github.com/cacao-soft/
@@ -25,13 +25,13 @@
  ★ 図鑑のモンスターを削除する。
    ⇒ イベントコマンド「ラベル」に >図鑑削除:[モンスター番号] と記述
    § $cao_enemy[モンスター番号].meet = false
- 
+
  ★ 図鑑に全てのモンスターを登録する。
    ⇒ イベントコマンド「ラベル」に <図鑑全登録> と記述
- 
+
  ★ 図鑑の全てのモンスターを削除する。
    ⇒ イベントコマンド「ラベル」に <図鑑全削除> と記述
- 
+
  ★ 図鑑を呼び出す。
    ⇒ イベントコマンド「ラベル」に <図鑑表示> と記述
    § $game_temp.next_scene = "ebook"   # 予約
@@ -118,7 +118,7 @@ class Ebook
 
     # モンスター図鑑の名前（メニュー項目の名前）
     EBOOK_NAME = "モンスター図鑑"
-    
+
     # 完成度の文字
     EBOOK_INFO_MESSAGE = "完成度"
 
