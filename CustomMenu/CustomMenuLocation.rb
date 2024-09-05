@@ -27,80 +27,80 @@
 # ◆ ユーザー設定
 #==============================================================================
 module CAO::CM::MN
-   #--------------------------------------------------------------------------
-   # ◇ ウィンドウの位置
-   #--------------------------------------------------------------------------
-   WINDOW_X = 0        # ｘ座標
-   WINDOW_Y = 360      # ｙ座標
-   WINDOW_WIDTH = 384  # 横幅
-   WINDOW_HEIGHT = 56  # 縦幅
+  #--------------------------------------------------------------------------
+  # ◇ ウィンドウの位置
+  #--------------------------------------------------------------------------
+  WINDOW_X = 0        # ｘ座標
+  WINDOW_Y = 360      # ｙ座標
+  WINDOW_WIDTH = 384  # 横幅
+  WINDOW_HEIGHT = 56  # 縦幅
 
-   #--------------------------------------------------------------------------
-   # ◇ マップ名の表示位置
-   #--------------------------------------------------------------------------
-   #     value : アラインメント (0..左揃え、1..中央揃え、2..右揃え)
-   #--------------------------------------------------------------------------
-   TEXT_ALIGN = 2
+  #--------------------------------------------------------------------------
+  # ◇ マップ名の表示位置
+  #--------------------------------------------------------------------------
+  #     value : アラインメント (0..左揃え、1..中央揃え、2..右揃え)
+  #--------------------------------------------------------------------------
+  TEXT_ALIGN = 2
 
-   #--------------------------------------------------------------------------
-   # ◇ システム文字を表示する
-   #--------------------------------------------------------------------------
-   SYSTEM_TEXT_DISPLAY = true
-     #------------------------------------------------------------------------
-     # ◇ システム文字 / アイコン
-     #------------------------------------------------------------------------
-     #     文字列 : 文字を表示（非表示にする場合は、"" を設定してください。）
-     #     数　値 : アイコンを表示（アイコン番号 [153]）
-     #------------------------------------------------------------------------
-     TEXT_MAP_NAME = "現在地"
+  #--------------------------------------------------------------------------
+  # ◇ システム文字を表示する
+  #--------------------------------------------------------------------------
+  SYSTEM_TEXT_DISPLAY = true
+    #------------------------------------------------------------------------
+    # ◇ システム文字 / アイコン
+    #------------------------------------------------------------------------
+    #     文字列 : 文字を表示（非表示にする場合は、"" を設定してください。）
+    #     数　値 : アイコンを表示（アイコン番号 [153]）
+    #------------------------------------------------------------------------
+    TEXT_MAP_NAME = "現在地"
 
-   #--------------------------------------------------------------------------
-   # ◇ ウィンドウスキンを使用する。
-   #--------------------------------------------------------------------------
-   #   false  : ウィンドウ枠が非表示になります。
-   #--------------------------------------------------------------------------
-   WINDOW_DISPLAY = true
+  #--------------------------------------------------------------------------
+  # ◇ ウィンドウスキンを使用する。
+  #--------------------------------------------------------------------------
+  #   false  : ウィンドウ枠が非表示になります。
+  #--------------------------------------------------------------------------
+  WINDOW_DISPLAY = true
 
- end
-
-
- #/////////////////////////////////////////////////////////////////////////////#
- #                                                                             #
- #                下記のスクリプトを変更する必要はありません。                 #
- #                                                                             #
- #/////////////////////////////////////////////////////////////////////////////#
+end
 
 
- class Scene_Menu
-   #--------------------------------------------------------------------------
-   # ○ オプションウィンドウの作成
-   #--------------------------------------------------------------------------
-   alias _cao_create_option_window_cm_map create_option_window
-   def create_option_window
-     _cao_create_option_window_cm_map
-     rect = [MN::WINDOW_X, MN::WINDOW_Y, MN::WINDOW_WIDTH, MN::WINDOW_HEIGHT]
-     @location_window = Window_Base.new(*rect)
-     @location_window.opacity = 0 unless MN::WINDOW_DISPLAY
-     h = @location_window.contents.height
-     if MN::SYSTEM_TEXT_DISPLAY
-       if MN::TEXT_MAP_NAME.is_a?(String)
-         @location_window.contents.font.color = @location_window.system_color
-         @location_window.contents.draw_text(2, 0, 80, h, MN::TEXT_MAP_NAME)
-       else
-         @location_window.draw_icon(MN::TEXT_MAP_NAME, 4, 0)
-       end
-     end
-     @location_window.contents.font.color = @location_window.normal_color
-     rect = Rect.new(90, 0, @location_window.contents.width - 90, h)
-     @location_window.contents.draw_text(rect, $game_map.name, MN::TEXT_ALIGN)
-     @component[:opt_map] = @location_window
-   end
-   #--------------------------------------------------------------------------
-   # ○ オプションウィンドウの解放
-   #--------------------------------------------------------------------------
-   alias _cao_dispose_option_window_cm_map dispose_option_window
-   def dispose_option_window
-     _cao_dispose_option_window_cm_map
-     @location_window.dispose
-   end
- end
+#/////////////////////////////////////////////////////////////////////////////#
+#                                                                             #
+#                下記のスクリプトを変更する必要はありません。                 #
+#                                                                             #
+#/////////////////////////////////////////////////////////////////////////////#
+
+
+class Scene_Menu
+  #--------------------------------------------------------------------------
+  # ○ オプションウィンドウの作成
+  #--------------------------------------------------------------------------
+  alias _cao_create_option_window_cm_map create_option_window
+  def create_option_window
+    _cao_create_option_window_cm_map
+    rect = [MN::WINDOW_X, MN::WINDOW_Y, MN::WINDOW_WIDTH, MN::WINDOW_HEIGHT]
+    @location_window = Window_Base.new(*rect)
+    @location_window.opacity = 0 unless MN::WINDOW_DISPLAY
+    h = @location_window.contents.height
+    if MN::SYSTEM_TEXT_DISPLAY
+      if MN::TEXT_MAP_NAME.is_a?(String)
+        @location_window.contents.font.color = @location_window.system_color
+        @location_window.contents.draw_text(2, 0, 80, h, MN::TEXT_MAP_NAME)
+      else
+        @location_window.draw_icon(MN::TEXT_MAP_NAME, 4, 0)
+      end
+    end
+    @location_window.contents.font.color = @location_window.normal_color
+    rect = Rect.new(90, 0, @location_window.contents.width - 90, h)
+    @location_window.contents.draw_text(rect, $game_map.name, MN::TEXT_ALIGN)
+    @component[:opt_map] = @location_window
+  end
+  #--------------------------------------------------------------------------
+  # ○ オプションウィンドウの解放
+  #--------------------------------------------------------------------------
+  alias _cao_dispose_option_window_cm_map dispose_option_window
+  def dispose_option_window
+    _cao_dispose_option_window_cm_map
+    @location_window.dispose
+  end
+end
