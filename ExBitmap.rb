@@ -3,7 +3,7 @@
 # ---------------------------------------------------------------------------
 #  Copyright (c) 2021 CACAO
 #  Released under the MIT License.
-#  https://opensource.org/licenses/mit-license.php
+#  https://opensource.org/license/mit
 # ---------------------------------------------------------------------------
 #  [Twitter] https://twitter.com/cacao_soft/
 #  [GitHub]  https://github.com/cacao-soft/
@@ -35,7 +35,7 @@
    alpha    : αチャンネルの有無
   ★ Bitmap#draw_pixel(x, y, color)
    このビットマップに点を描画します。
-   
+
   ★ Bitmap#draw_rect(x, y, width, height, color)
      Bitmap#draw_rect(rect, color)
    このビットマップに矩形(単色)を描画します。
@@ -159,7 +159,7 @@ class Bitmap
       file.write(iend)
     end
   end
-  
+
   private
   #--------------------------------------------------------------------------
   # ● チャンクの作成
@@ -209,7 +209,7 @@ class Bitmap
       bmp_skin = skin_to_bitmap(args[4])
       opacity = (args[5] || 200); err_type(opacity, Fixnum)
     end
-    
+
     # == ウィンドウ画像の描画処理 ==
     buffer = Bitmap.new(width, height)
     # 背景の描画
@@ -252,7 +252,7 @@ class Bitmap
     # バッファの解放
     buffer.dispose
   end
-  
+
   private
   # 引数の数を検査
   def err_size(min, max, size)
@@ -363,7 +363,7 @@ class Bitmap
     end
     buffer = Bitmap.new(width, height)
     rect = Rect.new(0, 0, width, height)
-    buffer.gradient_fill_rect(rect, color1, color2, vertical) 
+    buffer.gradient_fill_rect(rect, color1, color2, vertical)
     self.blt(x, y, buffer, buffer.rect)
     buffer.dispose
   rescue RGSSError
