@@ -3,7 +3,7 @@
 # ---------------------------------------------------------------------------
 #  Copyright (c) 2021 CACAO
 #  Released under the MIT License.
-#  https://opensource.org/licenses/mit-license.php
+#  https://opensource.org/license/mit
 # ---------------------------------------------------------------------------
 #  [Twitter] https://twitter.com/cacao_soft/
 #  [GitHub]  https://github.com/cacao-soft/
@@ -24,31 +24,31 @@
  -- 使用方法 ----------------------------------------------------------------
 
   ★ 位置の変更
-   Game_Actors#position=(pos)
-   pos : -1..クラス設定、0..前衛、1..中衛、2..後衛
-   例）$game_actor[1].position = 0
-   
+    Game_Actors#position=(pos)
+    pos : -1..クラス設定、0..前衛、1..中衛、2..後衛
+    例）$game_actor[1].position = 0
+
   ★ 通常攻撃不可能な位置の設定
-   武器のメモ欄に <位置×> と記入すると、その位置では通常攻撃不可にする。
-   複数設定する場合は、改行する。
-   例）<前衛×>
-   その他に英語を使用した設定が可能。
-   Game_Actors::POS_NAME で設定された位置の名称に左右されない。
+    武器のメモ欄に <位置×> と記入すると、その位置では通常攻撃不可にする。
+    複数設定する場合は、改行する。
+    例）<前衛×>
+    その他に英語を使用した設定が可能。
+    Game_Actors::POS_NAME で設定された位置の名称に左右されない。
      <NO_VANGUARD>  : 前衛禁止
      <NO_MIDGUARD>  : 中衛禁止
      <NO_REARGUARD> : 後衛禁止
 
   ★ 武器の使用判定
-   Game_Actors#wield_weapons?
-   戻り値 : true..通常攻撃可能、false..通常攻撃不可
-   例）$game_actor[1].wield_weapons?
+    Game_Actors#wield_weapons?
+    戻り値 : true..通常攻撃可能、false..通常攻撃不可
+    例）$game_actor[1].wield_weapons?
 
   ★ 位置の名称の取得
-   Game_Actors#position_name
-   例）$game_actor[1].position_name
+    Game_Actors#position_name
+    例）$game_actor[1].position_name
 
   ★ 隊列の描画
-   Window_Base#draw_actor_position(actor, x, y, width = 120, align = 0)
+    Window_Base#draw_actor_position(actor, x, y, width = 120, align = 0)
 
 =end
 
