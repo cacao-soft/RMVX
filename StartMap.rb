@@ -3,7 +3,7 @@
 # ---------------------------------------------------------------------------
 #  Copyright (c) 2021 CACAO
 #  Released under the MIT License.
-#  https://opensource.org/licenses/mit-license.php
+#  https://opensource.org/license/mit
 # ---------------------------------------------------------------------------
 #  [Twitter] https://twitter.com/cacao_soft/
 #  [GitHub]  https://github.com/cacao-soft/
@@ -46,16 +46,16 @@
 #==============================================================================
 module CAO
 module StartMap
-  
+
   # スタートマップのＩＤ
   START_MAP_ID = 2
-  
+
   # パーティのアクターのＩＤ
   START_ACTOR_ID = 0
-  
+
   # リセット時にスタートマップをスキップ
   RESET_SKIP = false
-  
+
 end # module StartMap
 end # module CAO
 
