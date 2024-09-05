@@ -3,7 +3,7 @@
 # ---------------------------------------------------------------------------
 #  Copyright (c) 2021 CACAO
 #  Released under the MIT License.
-#  https://opensource.org/licenses/mit-license.php
+#  https://opensource.org/license/mit
 # ---------------------------------------------------------------------------
 #  [Twitter] https://twitter.com/cacao_soft/
 #  [GitHub]  https://github.com/cacao-soft/
@@ -139,8 +139,8 @@ class Scene_Roll < Scene_Interrupt
   WLH = 24
   #--------------------------------------------------------------------------
   # ● オブジェクト初期化
-  #     text_key : 
-  #     mode     : 
+  #     text_key :
+  #     mode     :
   #--------------------------------------------------------------------------
   def initialize(text_key, mode = 0)
     check_error(text_key)
@@ -237,7 +237,7 @@ class Scene_Roll < Scene_Interrupt
           x = @text_sprite.bitmap.width - @contents_x - @margin
         end
         rect = Rect.new(0, 0, @contents_x + 10, WLH + 4)
-        @text_sprite.bitmap.blt(x - 5, @contents_y - 2, @bitmap, rect) 
+        @text_sprite.bitmap.blt(x - 5, @contents_y - 2, @bitmap, rect)
         @contents_x = 0
         @contents_y += WLH
         @bitmap.clear
