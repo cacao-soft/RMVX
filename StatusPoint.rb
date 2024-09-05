@@ -3,7 +3,7 @@
 # ---------------------------------------------------------------------------
 #  Copyright (c) 2021 CACAO
 #  Released under the MIT License.
-#  https://opensource.org/licenses/mit-license.php
+#  https://opensource.org/license/mit
 # ---------------------------------------------------------------------------
 #  [Twitter] https://twitter.com/cacao_soft/
 #  [GitHub]  https://github.com/cacao-soft/
@@ -37,7 +37,7 @@
 #==============================================================================
 # ◆ ユーザー設定（項目数：４）
 #==============================================================================
-  
+
 module CAO; class Status
   #--------------------------------------------------------------------------
   # ◇ レベルアップ時に貰えるポイント
@@ -261,7 +261,7 @@ class Window_StatusPoint < Window_Selectable
   end
   def decision_sort
     for i in 0...6
-      case i 
+      case i
         when 0 ; @actor.maxhp += @s_rate[i] * @psort[i]
         when 1 ; @actor.maxmp += @s_rate[i] * @psort[i]
         when 2 ; @actor.atk   += @s_rate[i] * @psort[i]
@@ -280,7 +280,7 @@ class Window_SpointInfos < Window_Base
     refresh
   end
   def refresh
-    self.contents.clear 
+    self.contents.clear
     self.contents.font.color = system_color
     text = CAO::Status::INFOS_REMAINING_POINT
     self.contents.draw_text(12, 0, 200, WLH, text)
