@@ -3,7 +3,7 @@
 # ---------------------------------------------------------------------------
 #  Copyright (c) 2021 CACAO
 #  Released under the MIT License.
-#  https://opensource.org/licenses/mit-license.php
+#  https://opensource.org/license/mit
 # ---------------------------------------------------------------------------
 #  [Twitter] https://twitter.com/cacao_soft/
 #  [GitHub]  https://github.com/cacao-soft/
@@ -51,12 +51,12 @@ module Conflate
   # ◇ 値引率
   #--------------------------------------------------------------------------
   CUT_RATE = 0.3
-  
+
   #--------------------------------------------------------------------------
   # ◇ ショップステータスを表示する
   #--------------------------------------------------------------------------
   USE_SHOP_STATUS = true
-  
+
   #--------------------------------------------------------------------------
   # ◇ 背景画像
   #--------------------------------------------------------------------------
@@ -64,7 +64,7 @@ module Conflate
   #--------------------------------------------------------------------------
   FILE_SCENEBACK  = nil#"BackConflate"
   FILE_STATUSBACK = nil#"BackConflateStatus"
-  
+
   #--------------------------------------------------------------------------
   # ◇ 用語設定
   #--------------------------------------------------------------------------
@@ -404,7 +404,7 @@ class Scene_Conflate < Scene_Base
     @material_window = Window_ConflateStatus.new(240, 80)
     @material_window.viewport = @viewport
     create_status_window
-    
+
     if CAO::Conflate::FILE_SCENEBACK || CAO::Conflate::FILE_STATUSBACK
       @help_window.opacity = 0
       @gold_window.opacity = 0
@@ -479,14 +479,14 @@ class Scene_Conflate < Scene_Base
     @info_window.update
     @material_window.update
     @status_window.update
-    
+
     @info_window.item = @conflate_window.item
     @material_window.item = @conflate_window.item
     @status_window.item = @conflate_window.item
-    
+
     update_conflate_input
     update_status_input
-    
+
     if @open_status
       @viewport.ox += 16
       if @viewport.ox > @status_window.width
