@@ -3,7 +3,7 @@
 # ---------------------------------------------------------------------------
 #  Copyright (c) 2021 CACAO
 #  Released under the MIT License.
-#  https://opensource.org/licenses/mit-license.php
+#  https://opensource.org/license/mit
 # ---------------------------------------------------------------------------
 #  [Twitter] https://twitter.com/cacao_soft/
 #  [GitHub]  https://github.com/cacao-soft/
@@ -53,7 +53,7 @@ class RetryFile < Scene_File
     File.open(FILE_RETRY, "rb") {|file| read_save_data(file) }
   end
   #--------------------------------------------------------------------------
-  # ● 
+  # ●
   #--------------------------------------------------------------------------
   class << self
     def save
