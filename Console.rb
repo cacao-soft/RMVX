@@ -3,7 +3,7 @@
 # ---------------------------------------------------------------------------
 #  Copyright (c) 2021 CACAO
 #  Released under the MIT License.
-#  https://opensource.org/licenses/mit-license.php
+#  https://opensource.org/license/mit
 # ---------------------------------------------------------------------------
 #  [Twitter] https://twitter.com/cacao_soft/
 #  [GitHub]  https://github.com/cacao-soft/
@@ -61,7 +61,7 @@
 
 module CAO
 module Debug
-  
+
   # 文字出力キー
   KEY_OUTPUT = Input::ALT
 
@@ -89,7 +89,7 @@ module Console
     Win32API.new('user32', 'FindWindow', 'pp', 'l')
   @@SetForegroundWindow =
     Win32API.new('user32', 'SetForegroundWindow', 'l', 'i')
-    
+
   @@AllocConsole =
     Win32API.new('kernel32', 'AllocConsole', 'v', 'i')
   @@FreeConsole =
@@ -98,12 +98,12 @@ module Console
     Win32API.new('kernel32', 'GetStdHandle', 'l', 'l')
   @@WriteConsole =
     Win32API.new('kernel32', 'WriteConsole', 'lplpp', 'l')
-  
+
   @@SetConsoleTitle =
     Win32API.new('kernel32', 'SetConsoleTitle', 'p', 'l')
   @@SetConsoleCursorPosition =
     Win32API.new('kernel32', 'SetConsoleCursorPosition', 'lp', 'l')
-  
+
   #--------------------------------------------------------------------------
   # ● ゲームのタイトルとハンドルの取得
   #--------------------------------------------------------------------------
@@ -128,7 +128,7 @@ module Console
   #--------------------------------------------------------------------------
   @@last_time = Time.now  # 最後に出力した時間
   @@wait_time = 0.6       # 待ち時間 (s)
-  
+
   #--------------------------------------------------------------------------
   # ● 待ち時間の設定
   #--------------------------------------------------------------------------
@@ -168,7 +168,7 @@ module Console
   def self.outp(*texts)
     if texts.empty?
       msg = "wrong number of arguments (#{texts.size} for 1)"
-      raise ArgumentError, msg, caller 
+      raise ArgumentError, msg, caller
     end
     sz = [0].pack("L")
     for text in texts
@@ -186,7 +186,7 @@ module Console
   def self.outi(*texts)
    if texts.empty?
       msg = "wrong number of arguments (#{texts.size} for 1)"
-      raise ArgumentError, msg, caller 
+      raise ArgumentError, msg, caller
     end
     return (Input.press?(CAO::Debug::KEY_OUTPUT) ? outp(*texts) : 0)
   end
@@ -199,7 +199,7 @@ module Console
   def self.outw(*texts)
     if texts.empty?
       msg = "wrong number of arguments (#{texts.size} for 1)"
-      raise ArgumentError, msg, caller 
+      raise ArgumentError, msg, caller
     end
     sz = 0
     unless Time.now - @@last_time < @@wait_time
