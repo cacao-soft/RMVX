@@ -3,7 +3,7 @@
 # ---------------------------------------------------------------------------
 #  Copyright (c) 2021 CACAO
 #  Released under the MIT License.
-#  https://opensource.org/licenses/mit-license.php
+#  https://opensource.org/license/mit
 # ---------------------------------------------------------------------------
 #  [Twitter] https://twitter.com/cacao_soft/
 #  [GitHub]  https://github.com/cacao-soft/
@@ -275,13 +275,13 @@ class Sprite_Reel < Sprite
     end
   end
   #--------------------------------------------------------------------------
-  # ● 
+  # ●
   #--------------------------------------------------------------------------
   def index
     return self.oy / @height % @item_max + 1
   end
   #--------------------------------------------------------------------------
-  # ● 
+  # ●
   #--------------------------------------------------------------------------
   def symbol
     return @items[(@item_max - self.oy / @height + 1) % @item_max]
@@ -332,11 +332,11 @@ end
 class Spriteset_Reel
   include CAO::Slot
   #--------------------------------------------------------------------------
-  # ● 
+  # ●
   #--------------------------------------------------------------------------
   attr_accessor :active
   #--------------------------------------------------------------------------
-  # ● 
+  # ●
   #--------------------------------------------------------------------------
   def initialize
     x = CAO::Slot::POS_REEL[0]
@@ -368,13 +368,13 @@ class Spriteset_Reel
     end
   end
   #--------------------------------------------------------------------------
-  # ● 
+  # ●
   #--------------------------------------------------------------------------
   def symbols
     return @reel_sprite.map {|reel| reel.symbol }
   end
   #--------------------------------------------------------------------------
-  # ● 
+  # ●
   #--------------------------------------------------------------------------
   def odds
     table_reel = self.symbols.sort
@@ -425,16 +425,16 @@ class Scene_Slot < Scene_Base
   #--------------------------------------------------------------------------
   def start
     @spriteset = Spriteset_Reel.new
-    
+
     @frame_sprite = Sprite.new
     @frame_sprite.bitmap = Cache.system("SlotFrame")
     @frame_sprite.z = 10
-    
+
     @bet_sprite = Sprite_SlotNumber.new(*POS_BET)
     @bet_sprite.z = 10
     @coin_sprite = Sprite_SlotNumber.new(*POS_COIN)
     @coin_sprite.z = 10
-    
+
     @process = PROCESS_BET
     @bet_sprite.number = 0
     @coin_sprite.number = CAO::Slot.coin
@@ -492,7 +492,7 @@ class Scene_Slot < Scene_Base
     end
   end
   #--------------------------------------------------------------------------
-  # ● 
+  # ●
   #--------------------------------------------------------------------------
   def update_bet_input
     if Input.trigger?(Input::B)
@@ -507,7 +507,7 @@ class Scene_Slot < Scene_Base
     end
   end
   #--------------------------------------------------------------------------
-  # ● 
+  # ●
   #--------------------------------------------------------------------------
   def bet_one
     return unless @bet_sprite.number < 3
@@ -519,7 +519,7 @@ class Scene_Slot < Scene_Base
     end
   end
   #--------------------------------------------------------------------------
-  # ● 
+  # ●
   #--------------------------------------------------------------------------
   def bet_max
     return unless @bet_sprite.number < 3
@@ -531,7 +531,7 @@ class Scene_Slot < Scene_Base
     end
   end
   #--------------------------------------------------------------------------
-  # ● 
+  # ●
   #--------------------------------------------------------------------------
   def start_spin
     return if @bet_sprite.number == 0
