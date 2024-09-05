@@ -3,7 +3,7 @@
 # ---------------------------------------------------------------------------
 #  Copyright (c) 2021 CACAO
 #  Released under the MIT License.
-#  https://opensource.org/licenses/mit-license.php
+#  https://opensource.org/license/mit
 # ---------------------------------------------------------------------------
 #  [Twitter] https://twitter.com/cacao_soft/
 #  [GitHub]  https://github.com/cacao-soft/
@@ -61,7 +61,7 @@
 
 class Rect
   #--------------------------------------------------------------------------
-  # ● 
+  # ●
   #--------------------------------------------------------------------------
   def to_a
     return self.x, self.y, self.width, self.height
@@ -107,7 +107,7 @@ class Game_Map
     convert_mapdata
   end
   #--------------------------------------------------------------------------
-  # ● 
+  # ●
   #--------------------------------------------------------------------------
   def convert_mapdata
     return unless @conversion_mapdata[@map_id]
@@ -120,7 +120,7 @@ class Game_Map
     end
   end
   #--------------------------------------------------------------------------
-  # ● 
+  # ●
   #--------------------------------------------------------------------------
   def reload_mapdata
     return unless $scene.kind_of?(Scene_Map)
@@ -142,35 +142,35 @@ class Game_Map
     end
   end
   #--------------------------------------------------------------------------
-  # ● 
+  # ●
   #--------------------------------------------------------------------------
   def chgt(*args)
     _chgt(*args)
   end
   #--------------------------------------------------------------------------
-  # ● 
+  # ●
   #--------------------------------------------------------------------------
   def chgt!(*args)
     conversion_mapdata(@map_id) << _chgt(*args)
     conversion_mapdata(@map_id).uniq!
   end
   #--------------------------------------------------------------------------
-  # ● 
+  # ●
   #--------------------------------------------------------------------------
   def subt(*args)
     _subt(*args)
   end
   #--------------------------------------------------------------------------
-  # ● 
+  # ●
   #--------------------------------------------------------------------------
   def subt!(*args)
     conversion_mapdata(@map_id) << _subt(*args)
     conversion_mapdata(@map_id).uniq!
   end
-  
+
 private
   #--------------------------------------------------------------------------
-  # ● 
+  # ●
   #--------------------------------------------------------------------------
   def _chgt(*args)
     case args.size
@@ -186,7 +186,7 @@ private
       msg = "wrong number of arguments (#{args.size} for 6)"
       raise ArgumentError, msg, caller(2)
     end
-    
+
     strata = strata.upcase[0] - ?A
     w.times do |i|
       h.times do |j|
@@ -215,7 +215,7 @@ private
     # return [:chgt, x, y, w, h, strata, tile_index]
   end
   #--------------------------------------------------------------------------
-  # ● 
+  # ●
   #--------------------------------------------------------------------------
   def _subt(*args)
     case args.size
@@ -234,7 +234,7 @@ private
       msg = "wrong number of arguments (#{args.size} for 8)"
       raise ArgumentError, msg, caller(2)
     end
-    
+
     map = load_data(sprintf("Data/Map%03d.rvdata", map_id))
     sw.times do |i|
       sh.times do |j|
