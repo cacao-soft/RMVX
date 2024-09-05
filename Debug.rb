@@ -3,7 +3,7 @@
 # ---------------------------------------------------------------------------
 #  Copyright (c) 2021 CACAO
 #  Released under the MIT License.
-#  https://opensource.org/licenses/mit-license.php
+#  https://opensource.org/license/mit
 # ---------------------------------------------------------------------------
 #  [Twitter] https://twitter.com/cacao_soft/
 #  [GitHub]  https://github.com/cacao-soft/
@@ -42,25 +42,25 @@ module CAO
   module Debug
     # エラーメッセージの表示
     USE_ERROR_MESSAGE = true
-    
+
     # マップコマンド
     USE_MAP_COMMAND = true
-    
+
     # マップコマンドキー
     KEY_MAP_COMMAND = Input::F8
-    
+
     # 項目名
     COMMAND_NAME = [ "スイッチ", "セルフスイッチ", "イベント変数",
                      "アイテム", "武器", "防具", "ゴールド", "パーティ" ]
-    
+
     # テキストの色
     COLOR_ERROR   = Color.new(230, 0, 0)  # エラー
     COLOR_WARNING = Color.new(0, 210, 0)  # 警告
-    
+
     # 経験値ゲージカラー
     COLOR_EXP_INDEX_1 = 28
     COLOR_EXP_INDEX_2 = 29
-    
+
     # コマンドのインデックス番号
     CMD_SWITCHE       = 0  # スイッチ
     CMD_SELF_SWITCHE  = 1  # セルフスイッチ
@@ -361,7 +361,7 @@ class Window_DebugRight < Window_Selectable
     end
   end
   #--------------------------------------------------------------------------
-  # ● 
+  # ●
   #--------------------------------------------------------------------------
   def update
     super
@@ -377,7 +377,7 @@ class Window_DebugRight < Window_Selectable
     end
   end
   #--------------------------------------------------------------------------
-  # ● 
+  # ●
   #--------------------------------------------------------------------------
   def update_switches
     if Input.trigger?(Input::C)
@@ -388,7 +388,7 @@ class Window_DebugRight < Window_Selectable
     end
   end
   #--------------------------------------------------------------------------
-  # ● 
+  # ●
   #--------------------------------------------------------------------------
   def update_self_switches
     current_id = @top_id + @index
@@ -410,7 +410,7 @@ class Window_DebugRight < Window_Selectable
     end
   end
   #--------------------------------------------------------------------------
-  # ● 
+  # ●
   #--------------------------------------------------------------------------
   def update_variables
     current_id = @top_id + @index
@@ -435,7 +435,7 @@ class Window_DebugRight < Window_Selectable
     end
   end
   #--------------------------------------------------------------------------
-  # ● 
+  # ●
   #--------------------------------------------------------------------------
   def update_items
     current_id = @top_id + @index
@@ -466,7 +466,7 @@ class Window_DebugRight < Window_Selectable
     end
   end
   #--------------------------------------------------------------------------
-  # ● 
+  # ●
   #--------------------------------------------------------------------------
   def is_number
     current_id = @top_id + @index
@@ -484,7 +484,7 @@ class Window_DebugRight < Window_Selectable
     end
   end
   #--------------------------------------------------------------------------
-  # ● 
+  # ●
   #--------------------------------------------------------------------------
   def number
     current_id = @top_id + @index
@@ -500,7 +500,7 @@ class Window_DebugRight < Window_Selectable
     end
   end
   #--------------------------------------------------------------------------
-  # ● 
+  # ●
   #--------------------------------------------------------------------------
   def number=(value)
     current_id = @top_id + @index
@@ -585,7 +585,7 @@ class Window_DebugRight < Window_Selectable
       return true
     else
       return false
-    end 
+    end
   end
   #--------------------------------------------------------------------------
   # ● デバッグ文字の表示
@@ -758,7 +758,7 @@ class Window_DebugActor < Window_Selectable
     end
   end
   #--------------------------------------------------------------------------
-  # ● 
+  # ●
   #--------------------------------------------------------------------------
   def draw_item(index, clear = true)
     self.contents.clear_rect(self.cursor_rect) if clear
@@ -781,7 +781,7 @@ class Window_DebugActor < Window_Selectable
     end
   end
   #--------------------------------------------------------------------------
-  # ● 
+  # ●
   #--------------------------------------------------------------------------
   def draw_actor_state(actor, x, y)
     self.contents.clear_rect(x, y, 372, 100)
@@ -790,7 +790,7 @@ class Window_DebugActor < Window_Selectable
     draw_item_state(actor, 24, y + WLH)
   end
   #--------------------------------------------------------------------------
-  # ● 
+  # ●
   #--------------------------------------------------------------------------
   def draw_item_state(actor, x, y)
     for i in 0...@states.size
@@ -801,8 +801,8 @@ class Window_DebugActor < Window_Selectable
      end
   end
   #--------------------------------------------------------------------------
-  # ● 
-  #     index : 
+  # ●
+  #     index :
   #--------------------------------------------------------------------------
   def actor_index=(index)
     if @actor_index != index
@@ -1311,7 +1311,7 @@ class Scene_Debug < Scene_Base
       return_scene
       return
     end
-    # 
+    #
     if Input.trigger?(Input::A)
       @value_window.index = 0
       $game_temp.debug_add_value = 1
