@@ -3,7 +3,7 @@
 # ---------------------------------------------------------------------------
 #  Copyright (c) 2021 CACAO
 #  Released under the MIT License.
-#  https://opensource.org/licenses/mit-license.php
+#  https://opensource.org/license/mit
 # ---------------------------------------------------------------------------
 #  [Twitter] https://twitter.com/cacao_soft/
 #  [GitHub]  https://github.com/cacao-soft/
@@ -36,14 +36,14 @@ module SD
   # 影を自動で表示する
   DISPLAY = true
 
-  
+
 #/////////////////////////////////////////////////////////////////////////////#
 #                                                                             #
 #                下記のスクリプトを変更する必要はありません。                 #
 #                                                                             #
 #/////////////////////////////////////////////////////////////////////////////#
-  
-  
+
+
   $data_mapinfos = load_data("Data/MapInfos.rvdata") if $data_mapinfos.nil?
   def self.map_data
     return Cache.map_data unless CAO::SD::DISPLAY
