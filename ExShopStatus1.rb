@@ -3,7 +3,7 @@
 # ---------------------------------------------------------------------------
 #  Copyright (c) 2021 CACAO
 #  Released under the MIT License.
-#  https://opensource.org/licenses/mit-license.php
+#  https://opensource.org/license/mit
 # ---------------------------------------------------------------------------
 #  [Twitter] https://twitter.com/cacao_soft/
 #  [GitHub]  https://github.com/cacao-soft/
@@ -39,22 +39,22 @@ module CAO_ExSHOP
   # ステータス項目名（ＨＰ, ＭＰ, 攻撃力, 防御力, 精神力, 俊敏性）
   # 命中率と回避率は、Window_ShopStatus#refresh
   PARA_NAME = ["ＨＰ", "ＭＰ", "攻撃力", "防御力", "精神力", "俊敏性"]
-  
+
   # 命中率と回避率を表示する
   PARA_PLUS = true
-  
+
   # 画像を使用しない（true で、TEXT_ITEM_KIND "無効"）
   NO_GRAPHICS = true
-  
+
   # アイテム分類名（アイテム、片手武器、両手武器、盾、頭防具、身体防具、装飾品）
   TEXT_ITEM_KIND = ["道具", "片手武器", "両手武器", "盾", "兜", "鎧", "装飾品"]
-  
+
   # 装備中文字（画像を使用する場合は"無効"）
   TEXT_EQUIPS_ICON = "Ｅ"
-  
+
   # 装備中文字の色
   COLOR_EQUIPS_ICON = Color.new(255, 216, 32)
-  
+
   # アクターの画像を別に用意する
   SHOP_FASE = false
 end
@@ -174,7 +174,7 @@ class Window_ShopStatus < Window_Base
     bitmap = Cache.face("ShopFace")
     self.contents.blt(x + 6, y + (SLH - 24) / 2, bitmap, rect, alpha)
   end
-  end  
+  end
   #--------------------------------------------------------------------------
   # ◎ アイテムの効果値の描画
   #     actor : アクター
