@@ -3,7 +3,7 @@
 # ---------------------------------------------------------------------------
 #  Copyright (c) 2021 CACAO
 #  Released under the MIT License.
-#  https://opensource.org/licenses/mit-license.php
+#  https://opensource.org/license/mit
 # ---------------------------------------------------------------------------
 #  [Twitter] https://twitter.com/cacao_soft/
 #  [GitHub]  https://github.com/cacao-soft/
@@ -337,7 +337,7 @@ class Window_PokerNumber < Window_Base
     end
   end
   #--------------------------------------------------------------------------
-  # ● 
+  # ●
   #--------------------------------------------------------------------------
   def left
     return 300 - 16 * @digits_max
@@ -378,7 +378,7 @@ class Window_Poker < Window_Base
   #--------------------------------------------------------------------------
   MODE_POKER = 0                          # ポーカーモード
   MODE_WCHANCE = 1                        # ダブルチャンスモード
-  
+
   CARD_WIDTH = 36                         # カード１枚の横幅
   CARD_HEIGHT = 48                        # カード１枚の縦幅
   CARD_SPACING = 20                       # カードの間隔
