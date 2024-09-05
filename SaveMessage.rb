@@ -3,7 +3,7 @@
 # ---------------------------------------------------------------------------
 #  Copyright (c) 2021 CACAO
 #  Released under the MIT License.
-#  https://opensource.org/licenses/mit-license.php
+#  https://opensource.org/license/mit
 # ---------------------------------------------------------------------------
 #  [Twitter] https://twitter.com/cacao_soft/
 #  [GitHub]  https://github.com/cacao-soft/
@@ -24,25 +24,25 @@
 
 module CAO
 module CFM
-  
+
   # メッセージウィンドウの横幅
   WINDOW_WIDTH = 320
-  
+
   # 完了メッセージの表示時間 (0 でキー入力待ち)
   WAIT_RESULT = 40
-  
+
   MSG_CFM_Y = "はい"
   MSG_CFM_N = "いいえ"
-  
+
   MSG_SAVE_C = "セーブしますか？"
   MSG_LOAD_C = "ロードしますか？"
-  
+
   MSG_SAVE_R = "セーブしました。"
   MSG_LOAD_R = "ロードしました。"
-  
+
   # メッセージウィンドウの行幅 (24 以上)
   WLH = 32
-  
+
 end # module CFM
 end # module CAO
 
