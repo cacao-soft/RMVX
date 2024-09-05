@@ -3,7 +3,7 @@
 # ---------------------------------------------------------------------------
 #  Copyright (c) 2021 CACAO
 #  Released under the MIT License.
-#  https://opensource.org/licenses/mit-license.php
+#  https://opensource.org/license/mit
 # ---------------------------------------------------------------------------
 #  [Twitter] https://twitter.com/cacao_soft/
 #  [GitHub]  https://github.com/cacao-soft/
@@ -35,7 +35,7 @@
       return true
     end
   end
-  
+
 =end
 
 
@@ -60,7 +60,7 @@ class Game_Interpreter
       @parameters = []  # 注釈の内容の数だけ格納
       for i in 0...6
         # 注釈の１行を代入
-        @parameters << @list[@index + i].parameters[0]  
+        @parameters << @list[@index + i].parameters[0]
         # 注釈に次の行がないなら
         break if @list[@index + i + 1].code != 408
       end
