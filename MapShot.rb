@@ -3,7 +3,7 @@
 # ---------------------------------------------------------------------------
 #  Copyright (c) 2021 CACAO
 #  Released under the MIT License.
-#  https://opensource.org/licenses/mit-license.php
+#  https://opensource.org/license/mit
 # ---------------------------------------------------------------------------
 #  [Twitter] https://twitter.com/cacao_soft/
 #  [GitHub]  https://github.com/cacao-soft/
@@ -60,38 +60,38 @@ class Scene_Map
     print "マップ画像を出力します。\n",
           "処理の完了までには、数分かかることもあります。\n",
           "その間、パソコンの操作は一切行わないでください。"
-    
+
     max_width = $game_map.width * 256
     max_height = $game_map.height * 256
     screen_width = Graphics.width * 8
     screen_height = Graphics.height * 8
-    
+
     bitmap = Bitmap.new($game_map.width * 32, $game_map.height * 32)
-    
+
     last_display_x = $game_map.display_x
     last_display_y = $game_map.display_y
     $game_map.display_x = 0
     $game_map.display_y = 0
-    
+
     time = Time.now
     while $game_map.display_y < max_height
       while $game_map.display_x < max_width
         $scene.update_basic
         Graphics.wait(5)
-                
+
         ss = Graphics.snap_to_bitmap
         bitmap.blt($game_map.display_x/8, $game_map.display_y/8, ss, ss.rect)
-        
+
         $game_map.display_x += screen_width
       end
       $game_map.display_x = 0
       $game_map.display_y += screen_height
     end
-    
+
     $game_map.display_x = last_display_x
     $game_map.display_y = last_display_y
     $scene.update_basic
-    
+
     sp = Sprite.new
     pg = Sprite.new
     Thread.new do
@@ -101,28 +101,28 @@ class Scene_Map
         "長時間固まりますが、そのままでお待ちください。", 1)
       sp.bitmap.font.size = 48
       sp.bitmap.draw_text(0, 32, 544, 72, "ファイルに書き出し中", 1)
-      
+
       pg.bitmap = Bitmap.new(64, 64)
       pg.bitmap.font.size = 60
       pg.y = Graphics.height - 96
       pg.bitmap.draw_text(pg.bitmap.rect, "◎")
-      
+
       loop do
         Graphics.update
         pg.x = (pg.x + 5) % 480
         sleep(0.1)
       end
     end
-    
+
     name = load_data("Data/MapInfos.rvdata")[$game_map.map_id].name
     bitmap.save_png("#{name}.png")
     bitmap.dispose
-    
+
     sp.bitmap.dispose
     sp.dispose
     pg.bitmap.dispose
     pg.dispose
-    
+
     time = Time.now - time
     print "すべての処理が完了しました。\n(#{time} s)"
   end
