@@ -3,7 +3,7 @@
 # ---------------------------------------------------------------------------
 #  Copyright (c) 2021 CACAO
 #  Released under the MIT License.
-#  https://opensource.org/licenses/mit-license.php
+#  https://opensource.org/license/mit
 # ---------------------------------------------------------------------------
 #  [Twitter] https://twitter.com/cacao_soft/
 #  [GitHub]  https://github.com/cacao-soft/
@@ -176,7 +176,7 @@ class Window_ShopStatus < Window_Base
     tm = "#{@item.mp_recovery_rate}% + #{sprintf("%4d", @item.mp_recovery)}"
     self.contents.draw_text(88, 84, 120, WLH, th, 2)
     self.contents.draw_text(88, 108, 120, WLH, tm, 2)
-    
+
     if @item.minus_state_set.empty?
       self.contents.draw_text(26, 168, 200, WLH, TEXT_SET[:none])
     else
