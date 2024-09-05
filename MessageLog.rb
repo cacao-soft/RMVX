@@ -3,7 +3,7 @@
 # ---------------------------------------------------------------------------
 #  Copyright (c) 2021 CACAO
 #  Released under the MIT License.
-#  https://opensource.org/licenses/mit-license.php
+#  https://opensource.org/license/mit
 # ---------------------------------------------------------------------------
 #  [Twitter] https://twitter.com/cacao_soft/
 #  [GitHub]  https://github.com/cacao-soft/
@@ -41,28 +41,28 @@
 #==============================================================================
 module CAO
 module Log
-  
+
   # ログ記録の禁止スイッチの番号
   OFF_SW_NUM = 5
-  
+
   # ログ表示の禁止スイッチの番号
   DISABLE_SW_NUM = 6
-  
+
   # 記録する行数
   MAX_LOG = 100
-  
+
   # 除外文字
   EXCEPTS_TEXT = []
-  
+
   # ログを表示するボタン
   SHOW_BUTTON = Input::Y
-  
+
   # 文字色の設定
   COL_SECRET = Color.new(255, 200, 0)         # 隠しメッセージ
   COL_NUMBER = Color.new(64, 200, 255)        # 数値入力：入力した数字
   COL_SELECT_O = Color.new(32, 240, 32)       # 選択肢：選択した項目
   COL_SELECT_X = Color.new(32, 240, 32, 128)  # 選択肢：選択しなかった項目
-  
+
 end
 end # module CAO
 
