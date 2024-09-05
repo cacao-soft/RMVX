@@ -3,7 +3,7 @@
 # ---------------------------------------------------------------------------
 #  Copyright (c) 2022 CACAO
 #  Released under the MIT License.
-#  https://opensource.org/licenses/mit-license.php
+#  https://opensource.org/license/mit
 # ---------------------------------------------------------------------------
 #  [Twitter] https://twitter.com/cacao_soft/
 #  [GitHub]  https://github.com/cacao-soft/
@@ -41,7 +41,7 @@
    param (データ構造のプロパティ名 RPG::*) ※ 省略時 name
    例）\D[i16]   # １６番のアイテム名
    例）\D[s16,mp_cost]   # １６番のアイテム名
-   
+
   ★ 各情報の参照
    パーティの情報    ： \P[n, param]
    アクターの情報    ： \A[n, param]
