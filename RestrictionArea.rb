@@ -3,7 +3,7 @@
 # ---------------------------------------------------------------------------
 #  Copyright (c) 2021 CACAO
 #  Released under the MIT License.
-#  https://opensource.org/licenses/mit-license.php
+#  https://opensource.org/license/mit
 # ---------------------------------------------------------------------------
 #  [Twitter] https://twitter.com/cacao_soft/
 #  [GitHub]  https://github.com/cacao-soft/
@@ -29,7 +29,7 @@
    行動可能エリア : $game_map.events[n].activity_area = [id]
    進入禁止エリア : $game_map.events[n].ropedoff_area = [id]
    ※ スクリプトでの設定は、一時的なものです。通常は、注釈をお使いください。
-   
+
    注釈に『行動可能エリア：id』
    注釈に『進入禁止エリア：id』
    複数のエリアを設定する場合は、(,)で区切ってください。
