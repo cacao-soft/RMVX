@@ -3,7 +3,7 @@
 # ---------------------------------------------------------------------------
 #  Copyright (c) 2021 CACAO
 #  Released under the MIT License.
-#  https://opensource.org/licenses/mit-license.php
+#  https://opensource.org/license/mit
 # ---------------------------------------------------------------------------
 #  [Twitter] https://twitter.com/cacao_soft/
 #  [GitHub]  https://github.com/cacao-soft/
@@ -249,7 +249,7 @@ class Window_NameInput < Window_Base
     self.opacity = 0
     @index = 0 unless CAO::ExInput::POS_MENU_LEFT
     @mode = 0     # 入力中の文字種類
-    @screen = []  # 
+    @screen = []  #
     refresh
   end
   #--------------------------------------------------------------------------
@@ -657,7 +657,7 @@ class Scene_Name < Scene_Base
       @front_sprite.z = 210
       @front_sprite.bitmap = Cache.picture(FILE_FRONTIMAGE_NAME)
     end
-  end  
+  end
   #--------------------------------------------------------------------------
   # ○ 元の画面へ戻る
   #--------------------------------------------------------------------------
