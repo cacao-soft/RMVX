@@ -3,7 +3,7 @@
 # ---------------------------------------------------------------------------
 #  Copyright (c) 2021 CACAO
 #  Released under the MIT License.
-#  https://opensource.org/licenses/mit-license.php
+#  https://opensource.org/license/mit
 # ---------------------------------------------------------------------------
 #  [Twitter] https://twitter.com/cacao_soft/
 #  [GitHub]  https://github.com/cacao-soft/
@@ -246,7 +246,7 @@ class Window_Message < Window_Selectable
     dispose_balloon
   end
   #--------------------------------------------------------------------------
-  # ● 
+  # ●
   #--------------------------------------------------------------------------
   def event_name
     id = $game_map.interpreter.instance_variable_get(:@event_id)
@@ -254,7 +254,7 @@ class Window_Message < Window_Selectable
     return event.name
   end
   #--------------------------------------------------------------------------
-  # ● 
+  # ●
   #--------------------------------------------------------------------------
   def stutter(text)
     if /(.+?)(?:,\s*\"(.+?)\"|$)/ =~ text
