@@ -3,7 +3,7 @@
 # ---------------------------------------------------------------------------
 #  Copyright (c) 2021 CACAO
 #  Released under the MIT License.
-#  https://opensource.org/licenses/mit-license.php
+#  https://opensource.org/license/mit
 # ---------------------------------------------------------------------------
 #  [Twitter] https://twitter.com/cacao_soft/
 #  [GitHub]  https://github.com/cacao-soft/
@@ -25,26 +25,26 @@
    $game_party.swap_member(pos1, pos2)
      pos1 と pos2 のアクターの位置を入れ替えます。
      例）$game_party.swap_member(0, 2)
-   
+
   ★ アクターの位置の移動
    $game_party.move_member(src_pos, dest_pos)
      src_pos のアクターを dest_pos へ移動します。
      例）$game_party.move_member(0, 2)
-   
+
   ★ アクターの位置を前にずらす
    $game_party.shift_member(actor_id)
      actor_id のアクターの位置を１つ前へ移動します。
      例）$game_party.shift_member(1)
-   
+
   ★ アクターの位置を後ろにずらす
    $game_party.unshift_member(actor_id)
      actor_id のアクターの位置を１つ後ろへ移動します。
      例）$game_party.unshift_member(1)
-   
+
   ★ アクターの位置を前にローテーション
    $game_party.rotate_member
      アクターの並びを１つ前にずらして、先頭のアクターは最後に移動します。
-   
+
   ★ アクターの位置を後ろにローテーション
    $game_party.back_rotate_member
      アクターの並びを１つ後ろにずらして、最後のアクターは先頭に移動します。
