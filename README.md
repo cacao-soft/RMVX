@@ -20,9 +20,9 @@
 |初期化ファイルの操作|[ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/ExFile.rb)|[ドキュメント](docs/ExFile.md)|
 |ディレクトリ操作|[ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/Dir.rb)|[ドキュメント](docs/ExDir.md)|
 |割り込みシーン|[ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/Interrupt.rb)|:x:|
-|＜拡張＞ ウィンドウベース|[ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/ExWindow.rb)||
-|パーティの並び変更|[ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/Position.rb)||
-|ベンチマーク|[ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/Benchmark.rb)||
+|＜拡張＞ ウィンドウベース|[ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/ExWindow.rb)|:x:|
+|パーティの並び変更|[ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/Position.rb)|:x:|
+|ベンチマーク|[ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/Benchmark.rb)|:x:|
 
 ### プリセット関連
 
