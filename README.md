@@ -18,7 +18,7 @@
 |Interpreter 108 EX|[ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/Ex108i.rb)|:x:|
 |Bitmap Class EX|[ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/ExBitmap.rb)|[ドキュメント](docs/ExBitmap.md)|
 |初期化ファイルの操作|[ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/ExFile.rb)||
-|ディレクトリ操作|[ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/Dir.rb)||
+|ディレクトリ操作|[ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/Dir.rb)|[ドキュメント](docs/ExDir.md)|
 |割り込みシーン|[ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/Interrupt.rb)|:x:|
 |＜拡張＞ ウィンドウベース|[ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/ExWindow.rb)||
 |パーティの並び変更|[ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/Position.rb)||
