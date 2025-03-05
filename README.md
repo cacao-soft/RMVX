@@ -112,7 +112,7 @@
 
 |スクリプト名|スクリプト|ドキュメント|
 |:--|:-:|:-:|
-|スタートマップ|[ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/StartMap.rb)||
+|スタートマップ|[ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/StartMap.rb)|[ドキュメント](docs/StartMap.md)|
 |オープニングロゴ|[ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/Logo.rb)|[ドキュメント](docs/Logo.md)|
 |スクリーンショット|[ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/ScreenShot.rb)|[ドキュメント](docs/ScreenShot.md)|
 
