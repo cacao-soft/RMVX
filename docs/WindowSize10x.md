@@ -8,20 +8,22 @@
 
 ※ 画像は開発中のものです。
 
-## スクリプト
+## ダウンロード
 
-- [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/0bb15ea76ae6e2bf499a7c666067a4bc3aa2eea9/wndSize.rb)
+- [スクリプトファイル](https://raw.githubusercontent.com/cacao-soft/RMVX/0bb15ea76ae6e2bf499a7c666067a4bc3aa2eea9/wndSize.rb)
 
 ## 使用準備
 
 ### 初期化ファイルの設定
 
-初期化ファイルの設定を使用して、初期サイズを変更する場合は[初期化ファイルの操作](https://raw.githubusercontent.com/cacao-soft/RMVX/main/ExFile.rb)スクリプトを導入し、`Game.ini`ファイルに次の３行を追加します。
-```
+初期化ファイルの設定を使用して、初期サイズを変更する場合は[初期化ファイルの操作](https://github.com/cacao-soft/RMVX/raw/main/ExFile.rb)スクリプトを導入し、`Game.ini`ファイルに次の３行を追加します。
+
+```ini
 [Window]
 WIDTH=800
 HEIGHT=600
 ```
+
 数値部分がウィンドウのサイズとなりますので、変更してください。
 
 初期化ファイルで設定ができるので、プレイヤーの好きなサイズで遊べるかな？と思ってたりします。その際は、サイズ変更を無効にしないと設定したサイズに戻れなくなります。
@@ -31,6 +33,7 @@ HEIGHT=600
 ### 終了時のサイズを保存
 
 Main セクションを以下のように変更します。
+
 ```ruby
 begin
   (中略)
@@ -56,16 +59,15 @@ end
 
 ### 位置情報も変更
 
-`WLIB::SetGameWindowSize`を使用すると、ウィンドウの位置は自動で中央に変更されます。位置も含めて指定したい場合は、
-`WLIB::SetWindowPos(hwnd, x, y, width, height, z, flag)`を使用してください。
+`WLIB::SetGameWindowSize`を使用すると、ウィンドウの位置は自動で中央に変更されます。\
+位置も含めて指定したい場合は、`WLIB::SetWindowPos(hwnd, x, y, width, height, z, flag)`を使用してください。
 
-`WLIB::SetGameWindowSize`は、クライアント領域での設定ですが、
-`WLIB::SetWindowPos`は、ウィンドウのサイズで設定する必要があります。
+`WLIB::SetGameWindowSize`は、クライアント領域での設定ですが、`WLIB::SetWindowPos`は、ウィンドウのサイズで設定する必要があります。
 現在のウィンドウのサイズを取得するには、`WLIB::GetGameWindowRect`を使用します。
 ちなみに、クライアント領域は、`WLIB::GetGameClientRect`です。
 こちらは、サイズのみの取得ですので、プロパティ x と y は、常に 0 となります。
 
-```
+```ruby
 hwnd = WLIB::GAME_HANDLE
 r = WLIB::GetGameWindowRect()
 WLIB::SetWindowPos(hwnd, r.x, r.y, r.width, r.height, 0, WLIB::SWP_NOZORDER)
@@ -81,37 +83,41 @@ WLIB::SetWindowPos(hwnd, r.x, r.y, r.width, r.height, 0, WLIB::SWP_NOZORDER)
 
 ※ 関数形式でのみ呼び出しが可能ですので、()の省略はできません。
 
-```
+```ruby
 WLIB::SetGameWindowSize(width, height)
 ```
 ウィンドウのサイズを変更します。処理に失敗した場合は、false を返します。
 
-```
+```ruby
 WLIB::MoveGameWindow(x, y)
 ```
 指定座標にウィンドウを移動します。処理に失敗した場合は、false を返します。
 
-```
+```ruby
 WLIB::MoveGameWindowCenter()
 ```
 画面中央にウィンドウを移動します。処理に失敗した場合は、false を返します。
 
-```
+```ruby
 WLIB::GetDesktopRect()
 ```
+
 デスクトップの位置とサイズを取得します。処理が成功すると、Rect オブジェクトを返します。　失敗した場合は、nil が返ります。
 
-```
+```ruby
 WLIB::GetGameWindowRect()
 ```
+
 ウィンドウの位置とサイズを取得します。処理が成功すると、Rect オブジェクトを返します。失敗した場合は、nil が返ります。
 
-```
+```ruby
 WLIB::GetGameClientRect()
 ```
+
 ウィンドウのクライアント領域のサイズを取得します。処理が成功すると、Rect オブジェクトを返します。プロパティ x と y は、常に 0 です。失敗した場合は、nil が返ります。
 
-```
+```ruby
 WLIB::GetFrameSize()
 ```
+
 ウィンドウのフレームサイズを取得します。処理が成功すると、[タイトルバー, 左右フレーム, 上下フレーム] を返します。

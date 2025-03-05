@@ -9,9 +9,9 @@
 
 ※ 画像は開発中のものです。
 
-## スクリプト
+## ダウンロード
 
-- [ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/ScreenShot.rb)
+- [スクリプトファイル](https://raw.githubusercontent.com/cacao-soft/RMVX/main/ScreenShot.rb)
 
 ## 使用準備
 
@@ -56,6 +56,7 @@ FILE_NAME = "%Y%m%d%H%M%S"
 ```ruby
 FILE_LOGO = ""
 ```
+
 こちらで設定された画像をロゴとして表示します。この画像は、スクリーンショットにも写ります。
 
 ### 撮影時の効果音
@@ -63,6 +64,7 @@ FILE_LOGO = ""
 ```ruby
 FILE_SOUND = RPG::SE.new("Key", 100, 150)
 ```
+
 ("ファイル名", 音量, ピッチ) です。
 
 ## 使用方法
@@ -76,9 +78,11 @@ PrintScreen キーを押すと撮影されます。このキーは PrtScn など
 ### シンプルなスクリプト
 
 Bitmap Class EX のサンプルとして作成したスクリーンショットスクリプトです。
+
 - [スクリーンショット F5 版](https://raw.githubusercontent.com/cacao-soft/RMVX/main/ScreenShot_F5.rb)
-- [スクリーンショット PrintScreen 版](https://raw.githubusercontent.com/cacao-soft/RMVX/main/ScreenShot_PS.rb)
-F5 キーまたは、PrintScreen キーを押すと、実行ファイルのあるフォルダに ScreenShot フォルダ作成し保存します。こちらのスクリプトは単純に画面を画像保存するだけの機能のみで作成されています。
+- [スクリーンショット PrintScreen 版](https://raw.githubusercontent.com/cacao-soft/RMVX/main/ScreenShot_PS.rb)\
+  F5 キーまたは、PrintScreen キーを押すと、実行ファイルのあるフォルダに ScreenShot フォルダ作成し保存します。\
+  こちらのスクリプトは単純に画面を画像保存するだけの機能のみで作成されています。
 
 ### 出力の高速化
 
@@ -86,7 +90,8 @@ F5 キーまたは、PrintScreen キーを押すと、実行ファイルのあ�
 
 この場合の次の順で導入してください。
 『Bitmap Class EX』『Bitmapクラスの拡張』『下記スクリプト』『スクリーンショット』
-```
+
+```ruby
 class Bitmap
   def save_png(filename, alpha = false)
     png_save(filename)
