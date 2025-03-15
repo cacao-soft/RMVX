@@ -1,7 +1,5 @@
 # RPGツクールVX 用 スクリプト (RGSS2)
 
-[CACAO SOFT](http://cacaosoft.webcrow.jp/) で使用中のサーバーサービス終了(2021.03)に伴い、配布していたスクリプト素材を退避しています。
-
 ## RGSS2 スクリプト素材一覧
 
 ### ベーススクリプト
@@ -28,7 +26,7 @@
 
 |スクリプト名|スクリプト|ドキュメント|
 |:--|:-:|:-:|
-|カスタムメニュー|||
+|カスタムメニュー|:o:|[ドキュメント](docs/CustomMenu.md)|
 |＜拡張＞ ピクチャの操作|[ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/ExPicture.rb)||
 |＜拡張＞ 名前入力の処理|:o:|[ドキュメント](docs/ExName.md)|
 |＜拡張＞ セーブ画面|[ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/ExSave.rb)||
