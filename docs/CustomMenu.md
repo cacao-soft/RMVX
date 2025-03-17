@@ -39,10 +39,10 @@
 
 どちらかのスクリプトを導入してください。
 
-- [ウィンドウタイプ](https://github.com/cacao-soft/RMVX/raw/main/CustomMenu//CustomMenuCommandWindow.rb)
+- [ウィンドウタイプ](https://github.com/cacao-soft/RMVX/raw/main/CustomMenu/CustomMenuCommandWindow.rb)
   - デフォルトのものと変わりません。
   - 凝ったことはできませんが、比較的簡単な設定で済みます。
-- [スプライトタイプ](https://github.com/cacao-soft/RMVX/raw/main/CustomMenu//CustomMenuCommandSprite.rb)
+- [スプライトタイプ](https://github.com/cacao-soft/RMVX/raw/main/CustomMenu/CustomMenuCommandSprite.rb)
   - 画像で表示するタイプです。
   - 通常時と選択時の画像を別に表示するため、ちょっとした動きも表現可能です。
   - 項目の画像\
@@ -53,10 +53,10 @@
 
 どちらかのスクリプトを導入してください。
 
-- [ウィンドウタイプ](https://github.com/cacao-soft/RMVX/raw/main/CustomMenu//CustomMenuStatusWindow.rb)
+- [ウィンドウタイプ](https://github.com/cacao-soft/RMVX/raw/main/CustomMenu/CustomMenuStatusWindow.rb)
   - １枚のウィンドウで表示します。
   - デフォルトのようなステータスとなります。
-- [スプライトタイプ](https://github.com/cacao-soft/RMVX/raw/main/CustomMenu//CustomMenuStatusSprite.rb)
+- [スプライトタイプ](https://github.com/cacao-soft/RMVX/raw/main/CustomMenu/CustomMenuStatusSprite.rb)
   - アクターごとに違うスプライトで表示します。
   - ウィンドウと違い背景となる画像を用意する必要があります。
 
