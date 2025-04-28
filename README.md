@@ -33,9 +33,9 @@
 |アイテム個別所持|[ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/PersonalItems.rb)||
 |＜拡張＞ ＥＶ出現条件|[ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/ExEvent.rb)||
 |解像度の変更|[ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/Resolution.rb)||
-|移動速度の変更|[ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/WalkSpeed.rb)||
+|移動速度の変更|[ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/WalkSpeed.rb)|:x:|
 |ピクチャの反転|[ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/PicMirror.rb)|:x:|
-|ピクチャの画像保存|[ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/SavePicture.rb)||
+|ピクチャの画像保存|[ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/SavePicture.rb)|:x:|
 
 ### デバッグ関連
 
@@ -67,7 +67,7 @@
 |モンスター図鑑|[ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/EnemyBook.rb)||
 |モンスター図鑑 #2|[ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/MonsterBook.rb)||
 |パーティ編成|[ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/Member.rb)||
-|ステータス振り分け機能|[ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/StatusPoint.rb)||
+|ステータス振り分け機能|[ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/StatusPoint.rb)|:x:|
 |アイテム合成|[ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/MakeItem2.rb)||
 
 ### メッセージ関連
@@ -86,8 +86,8 @@
 |スクリプト名|スクリプト|ドキュメント|
 |:--|:-:|:-:|
 |マップ名表示機能|[ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/Location.rb)||
-|自動影機能の回避|[ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/Shadow.rb)||
-|タイルの置換|[ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/ChangeTile.rb)||
+|自動影機能の回避|[ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/Shadow.rb)|:x:|
+|タイルの置換|[ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/ChangeTile.rb)|:x:|
 |遠景のフェード|[ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/Parallax.rb)|:x:|
 |＜拡張＞ 天候の設定|[ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/ExWeather.rb)|:x:|
 
@@ -102,7 +102,7 @@
 
 |スクリプト名|スクリプト|ドキュメント|
 |:--|:-:|:-:|
-|ポーカー|[ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/Poker.rb)||
+|ポーカー|[ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/Poker.rb)|[ドキュメント](docs/Poker.md)|
 |プチスロット|[ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/PetiteSlot.rb)||
 |シングルラインスロット|[ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/Slot.rb)||
 
