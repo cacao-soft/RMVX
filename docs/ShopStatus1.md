@@ -21,7 +21,7 @@
 
 ![ICON](imgs/ShopSet.png)
 
-```
+```text
 ファイル名：ShopSet
 フォルダ名：Graphics/System
 サ  イ  ズ：96 x 48（24x24）
@@ -33,7 +33,7 @@
 
 ![ICON](imgs/ShopFace.png)
 
-```
+```text
 ファイル名：ShopFace
 フォルダ名：Graphics/Fases
 サ  イ  ズ：96 x 24~（24x24）
