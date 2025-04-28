@@ -104,7 +104,7 @@
 |:--|:-:|:-:|
 |ポーカー|[ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/Poker.rb)|[ドキュメント](docs/Poker.md)|
 |プチスロット|[ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/PetiteSlot.rb)||
-|シングルラインスロット|[ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/Slot.rb)||
+|シングルラインスロット|[ダウンロード](https://raw.githubusercontent.com/cacao-soft/RMVX/main/Slot.rb)|[ドキュメント](docs/Slot.md)|
 
 ### その他
 
